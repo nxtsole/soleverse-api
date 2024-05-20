@@ -16,7 +16,7 @@ import Foundation
 // MARK: - BrandType
 
 /// Supported sneaker brands that the SoleVerse API can provide information about.
-public enum BrandType: String, CaseIterable {
+public enum BrandType: String, CaseIterable, Codable {
     case airJordan = "AIR_JORDAN"
 }
 

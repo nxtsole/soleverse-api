@@ -30,16 +30,16 @@ public struct SilhouetteEntity {
     /// Returns the history of the silhouette and how it was created.
     public let history: String?
     
-    /// Returns the technology that is used in the silhouette.
-    public let technology: TechnologyEntity?
+    /// Returns the list of technologies that is used in the silhouette.
+    public let technologies: [TechnologyEntity]
     
     // MARK: - Initializer(s)
     
-    public init(id: Int, name: String, brand: BrandEntity, history: String?, technology: TechnologyEntity?) {
+    public init(id: Int, name: String, brand: BrandEntity, history: String?, technologies: [TechnologyEntity]) {
         self.id = id
         self.name = name
         self.brand = brand
         self.history = history
-        self.technology = technology
+        self.technologies = technologies
     }
 }

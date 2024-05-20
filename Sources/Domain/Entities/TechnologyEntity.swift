@@ -29,11 +29,11 @@ public struct TechnologyEntity {
     public let history: String?
     
     /// Returns the brand that invented the technology.
-    public let brand: BrandEntity?
+    public let brand: BrandEntity
     
     // MARK: - Initializer(s)
     
-    public init(id: Int, name: String, history: String?, brand: BrandEntity?) {
+    public init(id: Int, name: String, history: String?, brand: BrandEntity) {
         self.id = id
         self.name = name
         self.history = history

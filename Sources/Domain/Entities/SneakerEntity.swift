@@ -13,6 +13,8 @@
 
 import Foundation
 
+// MARK: - SneakerEntity
+
 /// An entity representing a sneaker containing information about different things about it.
 public struct SneakerEntity {
     
@@ -51,9 +53,6 @@ public struct SneakerEntity {
     /// Returns the list of collaborators that collaborated on the sneaker or had a part in it.
     public let collaborators: [CollaboratorEntity]
     
-    /// Returns the technology that the sneaker uses as its tooling.
-    public let technology: TechnologyEntity?
-    
     /// Returns the brand that the sneaker is.
     public let brand: BrandEntity
     
@@ -64,5 +63,92 @@ public struct SneakerEntity {
     public let materials: String?
     
     /// Returns the image set containing the list of images to display.
-    public let image: SneakerImageEntity?
+    public let image: ImageEntity?
+    
+    // MARK: - Initializer(s)
+    
+    public init(id: Int, 
+                name: String?,
+                history: String?,
+                nickName: String?,
+                colorWay: String?,
+                releaseDate: Date?,
+                retailPrice: Double?,
+                sku: String?,
+                designers: [DesignerEntity],
+                collaborators: [CollaboratorEntity],
+                brand: BrandEntity,
+                silhouette: SilhouetteEntity?,
+                materials: String?,
+                image: ImageEntity?) {
+        self.id = id
+        self.name = name
+        self.history = history
+        self.nickName = nickName
+        self.colorWay = colorWay
+        self.releaseDate = releaseDate
+        self.retailPrice = retailPrice
+        self.sku = sku
+        self.designers = designers
+        self.collaborators = collaborators
+        self.brand = brand
+        self.silhouette = silhouette
+        self.materials = materials
+        self.image = image
+    }
+}
+
+// MARK: - ImageEntity
+
+public extension SneakerEntity {
+    
+    /// An entity representing the set of images related to the sneaker in different positions.
+    struct ImageEntity {
+        
+        // MARK: - Properties
+        
+        /// Returns the resource location where the image that displays the front of the sneaker is stored.
+        public let front: String?
+        
+        /// Returns the resource location where the image that displays the back of the sneaker is stored.
+        public let back: String?
+        
+        /// Returns the resource location where the image that displays the medial side of the sneaker is stored.
+        public let medial: String?
+        
+        /// Returns the resource location where the image that displays the medial side of the left sneaker is stored.
+        public let leftMedial: String?
+        
+        /// Returns the resource location where the image that displays the medial side of the right sneaker is stored.
+        public let rightMedial: String?
+        
+        /// Returns the resource location where the image that displays the lateral side of the sneaker is stored.
+        public let lateral: String?
+        
+        /// Returns the resource location where the image that displays the lateral side of the left sneaker is stored.
+        public let leftLateral: String?
+        
+        /// Returns the resource location where the image that displays the lateral side of the right sneaker is stored.
+        public let rightLateral: String?
+        
+        // MARK: - Initializer(s)
+        
+        public init(front: String?,
+                    back: String?,
+                    medial: String?,
+                    leftMedial: String?,
+                    rightMedial: String?,
+                    lateral: String?, 
+                    leftLateral: String?,
+                    rightLateral: String?) {
+            self.front = front
+            self.back = back
+            self.medial = medial
+            self.leftMedial = leftMedial
+            self.rightMedial = rightMedial
+            self.lateral = lateral
+            self.leftLateral = leftLateral
+            self.rightLateral = rightLateral
+        }
+    }
 }
