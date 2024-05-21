@@ -51,7 +51,13 @@ final class BrandModel: Model {
 // MARK: - AsyncMigration
 
 extension BrandModel {
+    
+    // MARK: - Create
+    
     struct Create: AsyncMigration {
+        
+        // MARK: - Public Method(s)
+        
         func prepare(on database: Database) async throws {
             let brandType = try await database
                 .enum("brand_type")

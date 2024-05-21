@@ -47,7 +47,13 @@ final class CollaboratorModel: Model {
 // MARK: - AsyncMigration
 
 extension CollaboratorModel {
+    
+    // MARK: - Create
+    
     struct Create: AsyncMigration {
+        
+        // MARK: - Public Method(s)
+        
         func prepare(on database: Database) async throws {
             try await database
                 .schema(CollaboratorModel.schema)

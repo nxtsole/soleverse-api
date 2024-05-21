@@ -45,7 +45,13 @@ final class DesignerBrandPivotModel: Model {
 // MARK: - AsyncMigration
 
 extension DesignerBrandPivotModel {
+    
+    // MARK: - Create
+    
     struct Create: AsyncMigration {
+        
+        // MARK: - Public Method(s)
+        
         func prepare(on database: Database) async throws {
             let brandType = try await database
                 .enum("brand_type")

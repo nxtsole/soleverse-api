@@ -71,7 +71,13 @@ final class DesignerModel: Model {
 // MARK: - AsyncMigration
 
 extension DesignerModel {
+    
+    // MARK: - Create
+    
     struct Create: AsyncMigration {
+        
+        // MARK: - Public Method(s)
+        
         func prepare(on database: Database) async throws {
             try await database
                 .schema(DesignerModel.schema)

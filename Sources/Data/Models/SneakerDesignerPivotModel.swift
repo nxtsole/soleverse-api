@@ -45,7 +45,13 @@ final class SneakerDesignerPivotModel: Model {
 // MARK: - AsyncMigration
 
 extension SneakerDesignerPivotModel {
+    
+    // MARK: - Create
+    
     struct Create: AsyncMigration {
+        
+        // MARK: - Public Method(s)
+        
         func prepare(on database: Database) async throws {
             try await database
                 .schema(SneakerDesignerPivotModel.schema)

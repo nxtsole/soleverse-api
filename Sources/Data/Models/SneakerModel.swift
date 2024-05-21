@@ -244,7 +244,13 @@ extension SneakerModel.Image {
 // MARK: - AsyncMigration
 
 extension SneakerModel {
+    
+    // MARK: - Create
+    
     struct Create: AsyncMigration {
+        
+        // MARK: - Public Method(s)
+        
         func prepare(on database: Database) async throws {
             let brandType = try await database
                 .enum("brand_type")

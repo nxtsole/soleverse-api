@@ -45,7 +45,13 @@ final class SilhouetteTechnologyPivotModel: Model {
 // MARK: - AsyncMigration
 
 extension SilhouetteTechnologyPivotModel {
+    
+    // MARK: - Create
+    
     struct Create: AsyncMigration {
+        
+        // MARK: - Public Method(s)
+        
         func prepare(on database: Database) async throws {
             try await database
                 .schema(SilhouetteTechnologyPivotModel.schema)
