@@ -34,5 +34,5 @@ public func configure(_ databases: Databases, _ migrations: Migrations, _ isTest
         as: .psql
     )
     
-    migrations.add(Todo.Create())
+    migrate(migrations)
 }

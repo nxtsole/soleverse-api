@@ -20,6 +20,10 @@ public func configure(_ app: Application) async throws {
     middlewares(app)
 
     try configure(app.databases, app.migrations, app.environment == .testing)
+    
+    try await app.autoRevert()
+    try await app.autoMigrate()
+    
     setupRepositories(app)
 
     // register routes
