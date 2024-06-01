@@ -41,12 +41,15 @@ final class TechnologyModel: Model {
     
     init() {}
     
-    init(id: Int, name: String, history: String?, brandId: BrandModel.IDValue) {
+    @discardableResult
+    init(id: Int, name: String, history: String?, brandId: BrandModel.IDValue, on database: Database) async throws {
         self.id = id
         self.name = name
         self.history = history
         
         $brand.id = brandId
+        
+        try await save(on: database)
     }
 }
 

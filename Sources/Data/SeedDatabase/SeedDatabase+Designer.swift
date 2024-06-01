@@ -13,15 +13,35 @@
 
 import Fluent
 
+// MARK: - SeedDatabase
+
 extension SeedDatabase {
-    
-    // MARK: - Public Method(s)
-    
     func prepareDesigners(on database: Database) async throws {
-        // TODO: - Populate Designers
+        try await DesignerModel(designer: .peterMoore, name: "Peter Moore", history: nil, silhouettes: [.airJordan(.oneHigh)], brandsWorkedAt: [.airJordan], on: database)
     }
     
     func revertDesigners(on database: Database) async throws {
         try await DesignerModel.query(on: database).delete()
+    }
+}
+
+// MARK: - DesignerModel
+
+extension DesignerModel {
+    enum Designers: Int {
+        case peterMoore
+    }
+}
+
+private extension DesignerModel {
+    
+    @discardableResult
+    convenience init(designer: Designers,
+                     name: String,
+                     history: String?,
+                     silhouettes: [SilhouetteModel.Silhouettes],
+                     brandsWorkedAt: [BrandModel.IDValue],
+                     on database: Database) async throws {
+        try await self.init(id: designer.rawValue, name: name, history: history, silhouettes: silhouettes.map(\.id), brandsWorkedAt: brandsWorkedAt, on: database)
     }
 }

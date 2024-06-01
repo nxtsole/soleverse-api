@@ -23,7 +23,7 @@ final class SilhouetteModel: Model {
     static var schema = "silhouettes"
     
     @ID(custom: "id", generatedBy: .user)
-    var id: Int?
+    var id: String?
     
     @Field(key: "name")
     var name: String
@@ -47,7 +47,8 @@ final class SilhouetteModel: Model {
     
     init() {}
     
-    init(id: Int, name: String, history: String?, brandId: BrandModel.IDValue, technologies: [TechnologyModel.IDValue], on database: Database) async throws {
+    @discardableResult
+    init(id: String, name: String, history: String?, brandId: BrandModel.IDValue, technologies: [TechnologyModel.IDValue], on database: Database) async throws {
         self.id = id
         self.name = name
         self.history = history

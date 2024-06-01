@@ -57,7 +57,7 @@ extension DesignerSilhouettePivotModel {
                 .schema(DesignerSilhouettePivotModel.schema)
                 .id()
                 .field("designer_id", .int, .required, .references(DesignerModel.schema, "id", onDelete: .cascade))
-                .field("silhouette_id", .int, .required, .references(SilhouetteModel.schema, "id", onDelete: .cascade))
+                .field("silhouette_id", .string, .required, .references(SilhouetteModel.schema, "id", onDelete: .cascade))
                 .create()
         }
         

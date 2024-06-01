@@ -11,14 +11,17 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Domain
 import Fluent
 
 extension SeedDatabase {
-    
-    // MARK: - Public Method(s)
-    
     func prepareBrands(on database: Database) async throws {
-        // TODO: - Populate Brands
+        for brand in BrandType.allCases {
+            switch brand {
+            case .airJordan:
+                try await BrandModel(id: brand, name: "Air Jordan", history: nil, on: database)
+            }
+        }
     }
     
     func revertBrands(on database: Database) async throws {

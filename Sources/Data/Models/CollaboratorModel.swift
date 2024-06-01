@@ -38,10 +38,13 @@ final class CollaboratorModel: Model {
     
     init() {}
     
-    init(id: Int, name: String, history: String?) {
+    @discardableResult
+    init(id: Int, name: String, history: String?, on database: Database) async throws {
         self.id = id
         self.name = name
         self.history = history
+        
+        try await save(on: database)
     }
 }
 

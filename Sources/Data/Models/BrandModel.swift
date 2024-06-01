@@ -41,10 +41,13 @@ final class BrandModel: Model {
     
     init() {}
     
-    init(id: BrandType, name: String, history: String? = nil) {
+    @discardableResult
+    init(id: BrandType, name: String, history: String? = nil, on database: Database) async throws {
         self.id = id
         self.name = name
         self.history = history
+        
+        try await save(on: database)
     }
 }
 

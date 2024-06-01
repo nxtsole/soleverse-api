@@ -56,7 +56,7 @@ extension SneakerCollaboratorPivotModel {
             try await database
                 .schema(SneakerCollaboratorPivotModel.schema)
                 .id()
-                .field("sneaker_id", .int, .required, .references(SneakerModel.schema, "id", onDelete: .cascade))
+                .field("sneaker_id", .string, .required, .references(SneakerModel.schema, "id", onDelete: .cascade))
                 .field("collaborator_id", .int, .required, .references(CollaboratorModel.schema, "id", onDelete: .cascade))
                 .create()
         }

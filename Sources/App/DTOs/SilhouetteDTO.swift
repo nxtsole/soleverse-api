@@ -20,7 +20,7 @@ struct SilhouetteDTO: Content {
     
     // MARK: - Properties
     
-    let id: Int
+    let id: String
     let name: String
     let brand: BrandDTO
     let history: String?

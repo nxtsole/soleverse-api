@@ -56,7 +56,7 @@ extension SneakerDesignerPivotModel {
             try await database
                 .schema(SneakerDesignerPivotModel.schema)
                 .id()
-                .field("sneaker_id", .int, .required, .references(SneakerModel.schema, "id", onDelete: .cascade))
+                .field("sneaker_id", .string, .required, .references(SneakerModel.schema, "id", onDelete: .cascade))
                 .field("designer_id", .int, .required, .references(DesignerModel.schema, "id", onDelete: .cascade))
                 .create()
         }

@@ -68,6 +68,7 @@ final class SneakerModel: Model {
     
     init() {}
     
+    @discardableResult
     init(id: String,
          name: String?,
          history: String?,
@@ -269,7 +270,7 @@ extension SneakerModel {
                 .field("sku", .string)
                 .field("brand", brandType, .required, .references(BrandModel.schema, "id"))
                 .unique(on: "brand")
-                .field("silhouette", .int, .references(SilhouetteModel.schema, "id"))
+                .field("silhouette", .string, .references(SilhouetteModel.schema, "id"))
                 .unique(on: "silhouette")
                 .field("materials", .string)
                 .field("image", .dictionary(of: .string))

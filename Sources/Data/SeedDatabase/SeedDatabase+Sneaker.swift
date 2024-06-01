@@ -13,15 +13,54 @@
 
 import Fluent
 
+// MARK: - SeedDatabase
+
 extension SeedDatabase {
-    
-    // MARK: - Public Method(s)
-    
     func prepareSneakers(on database: Database) async throws {
-        // TODO: - Populate Sneakers
+        try await prepareAirJordanSneakers(on: database)
     }
     
     func revertSneakers(on database: Database) async throws {
         try await SneakerModel.query(on: database).delete()
+    }
+}
+
+// MARK: - SneakerModel
+
+extension SneakerModel {
+
+    @discardableResult
+    convenience init(id: Int,
+                     name: String?,
+                     history: String?,
+                     nickName: String?,
+                     colorWay: String?,
+                     releaseDate: Date?,
+                     retailPrice: Double?,
+                     sku: String?,
+                     designers: [DesignerModel.Designers],
+                     collaborators: [CollaboratorModel.Collaborators],
+                     brand: BrandModel.IDValue,
+                     silhouette: SilhouetteModel.Silhouettes?,
+                     materials: String?,
+                     imageFields: Image.Options?,
+                     on database: Database) async throws {
+        try await self.init(
+            id: "\(id)-\(brand.rawValue)",
+            name: name,
+            history: history,
+            nickName: nickName,
+            colorWay: colorWay,
+            releaseDate: releaseDate,
+            retailPrice: retailPrice,
+            sku: sku,
+            designers: designers.map(\.rawValue),
+            collaborators: collaborators.map(\.rawValue),
+            brand: brand,
+            silhouette: silhouette.flatMap { $0.id },
+            materials: materials,
+            imageFields: imageFields,
+            on: database
+        )
     }
 }

@@ -44,6 +44,7 @@ final class DesignerModel: Model {
     
     init() {}
     
+    @discardableResult
     init(id: Int, name: String, history: String?, silhouettes: [SilhouetteModel.IDValue], brandsWorkedAt: [BrandModel.IDValue], on database: Database) async throws {
         self.id = id
         self.name = name

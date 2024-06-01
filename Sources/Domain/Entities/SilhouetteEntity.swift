@@ -19,7 +19,7 @@ public struct SilhouetteEntity {
     // MARK: - Properties
     
     /// The object identifier uniquely identifying the silhouette in the database.
-    public let id: Int
+    public let id: String
     
     /// Returns the name of the silhouette.
     public let name: String
@@ -35,7 +35,7 @@ public struct SilhouetteEntity {
     
     // MARK: - Initializer(s)
     
-    public init(id: Int, name: String, brand: BrandEntity, history: String?, technologies: [TechnologyEntity]) {
+    public init(id: String, name: String, brand: BrandEntity, history: String?, technologies: [TechnologyEntity]) {
         self.id = id
         self.name = name
         self.brand = brand

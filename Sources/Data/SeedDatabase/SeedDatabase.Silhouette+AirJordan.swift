@@ -11,48 +11,41 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Domain
 import Fluent
 
 // MARK: - SeedDatabase
 
 extension SeedDatabase {
-    func prepareSilhouettes(on database: Database) async throws {
-        try await prepareAirJordanSilhouettes(on: database)
+    func prepareAirJordanSilhouettes(on database: Database) async throws {
+        try await SilhouetteModel(silhouette: .oneHigh, name: "Air Jordan 1 High", history: nil, brandId: .airJordan, technologies: [.air], on: database)
     }
-    
-    func revertSilhouetes(on database: Database) async throws {
-        try await SilhouetteModel.query(on: database).delete()
+}
+
+// MARK: - Silhouettes
+
+extension SilhouetteModel.Silhouettes {
+    enum AirJordan: Int {
+        case oneHigh
     }
 }
 
 // MARK: - SilhouetteModel
 
-extension SilhouetteModel {
-    enum Silhouettes {
-        case airJordan(AirJordan)
-        
-        var id: String {
-            switch self {
-            case let .airJordan(airJordan):
-                "\(airJordan.rawValue)-\(BrandType.airJordan.rawValue)"
-            }
-        }
-    }
+private extension SilhouetteModel {
     
     @discardableResult
-    convenience init(silhouette: Silhouettes,
+    convenience init(silhouette: Silhouettes.AirJordan,
                      name: String,
                      history: String?,
                      brandId: BrandModel.IDValue,
                      technologies: [TechnologyModel.Technologies],
                      on database: Database) async throws {
         try await self.init(
-            id: silhouette.id,
+            silhouette: .airJordan(silhouette),
             name: name,
             history: history,
             brandId: brandId,
-            technologies: technologies.map(\.rawValue),
+            technologies: technologies,
             on: database
         )
     }

@@ -56,7 +56,7 @@ extension SilhouetteTechnologyPivotModel {
             try await database
                 .schema(SilhouetteTechnologyPivotModel.schema)
                 .id()
-                .field("silhouette_id", .int, .required, .references(SilhouetteModel.schema, "id", onDelete: .cascade))
+                .field("silhouette_id", .string, .required, .references(SilhouetteModel.schema, "id", onDelete: .cascade))
                 .field("technology_id", .int, .required, .references(TechnologyModel.schema, "id", onDelete: .cascade))
                 .create()
         }
