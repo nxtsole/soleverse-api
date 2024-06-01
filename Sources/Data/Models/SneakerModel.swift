@@ -11,6 +11,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Domain
 import Fluent
 
 // MARK: - SneakerModel
@@ -22,7 +23,7 @@ final class SneakerModel: Model {
     static var schema = "sneakers"
     
     @ID(custom: "id", generatedBy: .user)
-    var id: Int?
+    var id: String?
     
     @OptionalField(key: "name")
     var name: String?
@@ -67,7 +68,7 @@ final class SneakerModel: Model {
     
     init() {}
     
-    init(id: Int,
+    init(id: String,
          name: String?,
          history: String?,
          nickName: String?,
@@ -168,7 +169,7 @@ extension SneakerModel {
             self.rightLateral = rightLateral
         }
         
-        convenience init(sneakerId: Int, options: Options) {
+        convenience init(sneakerId: String, options: Options) {
             let imagePath = "https://nxtsole.github.io/soleverse-images/sneakers/"
             
             var imageMap: [Options: String] = [:]
@@ -277,6 +278,44 @@ extension SneakerModel {
         
         func revert(on database: Database) async throws {
             try await database.schema(SneakerModel.schema).delete()
+        }
+    }
+}
+
+// MARK: - EntityMappable
+
+extension SneakerModel: EntityMappable {
+    var toEntity: SneakerEntity {
+        get throws {
+            guard let id else { throw DomainError.somethingWrong("id is missing in SneakerModel") }
+            
+            return SneakerEntity(
+                id: id,
+                name: name,
+                history: history,
+                nickName: nickName,
+                colorWay: colorWay,
+                releaseDate: releaseDate,
+                retailPrice: retailPrice,
+                sku: sku,
+                designers: try designers.map { try $0.toEntity },
+                collaborators: try collaborators.map { try $0.toEntity },
+                brand: try brand.toEntity,
+                silhouette: try silhouette.flatMap { try $0.toEntity },
+                materials: materials,
+                image: imageFields.flatMap {
+                    SneakerEntity.ImageEntity(
+                        front: $0.front,
+                        back: $0.back,
+                        medial: $0.medial,
+                        leftMedial: $0.leftMedial,
+                        rightMedial: $0.rightMedial,
+                        lateral: $0.lateral,
+                        leftLateral: $0.leftMedial,
+                        rightLateral: $0.rightLateral
+                    )
+                }
+            )
         }
     }
 }

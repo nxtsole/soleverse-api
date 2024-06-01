@@ -79,3 +79,14 @@ extension BrandModel {
         }
     }
 }
+
+// MARK: - EntityMappable
+
+extension BrandModel: EntityMappable {
+    var toEntity: BrandEntity {
+        get throws {
+            guard let id else { throw DomainError.somethingWrong("id is missing in BrandModel") }
+            return BrandEntity(id: id, name: name, history: history)
+        }
+    }
+}

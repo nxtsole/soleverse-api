@@ -21,7 +21,7 @@ public struct SneakerEntity {
     // MARK: - Properties
     
     /// The object identifier uniquely identifying the sneaker in the database.
-    public let id: Int
+    public let id: String
     
     /// Returns the official name of the sneaker given by the brand.
     public let name: String?
@@ -67,7 +67,7 @@ public struct SneakerEntity {
     
     // MARK: - Initializer(s)
     
-    public init(id: Int, 
+    public init(id: String,
                 name: String?,
                 history: String?,
                 nickName: String?,

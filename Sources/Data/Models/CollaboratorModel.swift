@@ -11,6 +11,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Domain
 import Fluent
 
 // MARK: - CollaboratorModel
@@ -65,6 +66,17 @@ extension CollaboratorModel {
         
         func revert(on database: Database) async throws {
             try await database.schema(CollaboratorModel.schema).delete()
+        }
+    }
+}
+
+// MARK: - EntityMappable
+
+extension CollaboratorModel: EntityMappable {
+    var toEntity: CollaboratorEntity {
+        get throws {
+            guard let id else { throw DomainError.somethingWrong("id is missing in CollaboratorModel") }
+            return CollaboratorEntity(id: id, name: name, history: history)
         }
     }
 }

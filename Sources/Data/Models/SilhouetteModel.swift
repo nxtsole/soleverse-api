@@ -11,6 +11,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Domain
 import Fluent
 
 // MARK: - SilhouetteModel
@@ -92,6 +93,24 @@ extension SilhouetteModel {
         
         func revert(on database: Database) async throws {
             try await database.schema(SilhouetteModel.schema).delete()
+        }
+    }
+}
+
+// MARK: - EntityMappable
+
+extension SilhouetteModel: EntityMappable {
+    var toEntity: SilhouetteEntity {
+        get throws {
+            guard let id else { throw DomainError.somethingWrong("id is missing in SilhouetteModel") }
+            
+            return SilhouetteEntity(
+                id: id,
+                name: name,
+                brand: try brand.toEntity,
+                history: history,
+                technologies: try technologies.map { try $0.toEntity }
+            )
         }
     }
 }

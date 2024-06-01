@@ -11,6 +11,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Domain
 import Fluent
 
 // MARK: - DesignerModel
@@ -89,6 +90,24 @@ extension DesignerModel {
         
         func revert(on database: Database) async throws {
             try await database.schema(DesignerModel.schema).delete()
+        }
+    }
+}
+
+// MARK: - EntityMappable
+
+extension DesignerModel: EntityMappable {
+    var toEntity: DesignerEntity {
+        get throws {
+            guard let id else { throw DomainError.somethingWrong("id is missing in DesignerModel") }
+            
+            return DesignerEntity(
+                id: id,
+                name: name,
+                history: history,
+                silhouettes: try silhouettes.map { try $0.toEntity },
+                brandsWorkedAt: try brandsWorkedAt.map { try $0.toEntity }
+            )
         }
     }
 }

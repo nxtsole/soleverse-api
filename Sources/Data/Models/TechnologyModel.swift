@@ -11,6 +11,7 @@
 //
 //===----------------------------------------------------------------------===//
 
+import Domain
 import Fluent
 
 // MARK: - TechnologyModel
@@ -76,6 +77,17 @@ extension TechnologyModel {
         
         func revert(on database: Database) async throws {
             try await database.schema(TechnologyModel.schema).delete()
+        }
+    }
+}
+
+// MARK: - EntityMappable
+
+extension TechnologyModel: EntityMappable {
+    var toEntity: TechnologyEntity {
+        get throws {
+            guard let id else { throw DomainError.somethingWrong("id is missing in TechnologyModel") }
+            return TechnologyEntity(id: id, name: name, history: history, brand: try brand.toEntity)
         }
     }
 }
