@@ -23,6 +23,12 @@ struct RepositoryId: Hashable, Codable {
 
 extension RepositoryId {
     static let todo = RepositoryId(string: "todo")
+    static let brand = RepositoryId(string: "brand")
+    static let technology = RepositoryId(string: "technology")
+    static let silhouette = RepositoryId(string: "silhouette")
+    static let collaborator = RepositoryId(string: "collaborator")
+    static let designer = RepositoryId(string: "designer")
+    static let sneaker = RepositoryId(string: "sneaker")
 }
 
 // MARK: - RepositoryFactory
@@ -61,4 +67,10 @@ extension Application {
 
 func setupRepositories(_ app: Application) {
     app.repositories.register(.todo) { DatabaseTodoRepository($0) }
+    app.repositories.register(.brand) { DatabaseBrandRepository($0) }
+    app.repositories.register(.technology) { DatabaseTechnologyRepository($0) }
+    app.repositories.register(.silhouette) { DatabaseSilhouetteRepository($0) }
+    app.repositories.register(.collaborator) { DatabaseCollaboratorRepository($0) }
+    app.repositories.register(.designer) { DatabaseDesignerRepository($0) }
+    app.repositories.register(.sneaker) { DatabaseSneakerRepository($0) }
 }

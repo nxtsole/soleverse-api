@@ -23,7 +23,7 @@ public struct DatabaseDesignerRepository: DesignerRepository {
     
     // MARK: - Initializer(s)
     
-    public init(request: Request) {
+    public init(_ request: Request) {
         self.request = request
     }
     
