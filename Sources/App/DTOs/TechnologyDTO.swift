@@ -11,8 +11,23 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Foundation
+import Domain
+import Vapor
 
-public protocol SneakerRepository: Repository {
-    func read(id: String) async throws -> SneakerEntity
+// MARK: - TechnologyDTO
+
+struct TechnologyDTO: Content {
+    
+    // MARK: - Properties
+    
+    let id: Int
+    let name: String
+    let history: String?
+    let brand: BrandDTO
+}
+
+// MARK: - TechnologyEntity
+
+extension TechnologyEntity: DTOMappable {
+    var toDTO: TechnologyDTO { TechnologyDTO(id: id, name: name, history: history, brand: brand.toDTO) }
 }

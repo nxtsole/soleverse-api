@@ -24,4 +24,15 @@ func routes(_ app: Application) throws {
     }
 
     try app.register(collection: TodoController())
+    
+    try app.group("api") { api in
+        try api.group("v1") { v1 in
+            try v1.register(collection: BrandController())
+            try v1.register(collection: TechnologyController())
+            try v1.register(collection: SilhouetteController())
+            try v1.register(collection: CollaboratorController())
+            try v1.register(collection: DesignerController())
+            try v1.register(collection: SneakerController())
+        }
+    }
 }

@@ -13,6 +13,8 @@
 
 import Foundation
 
-public protocol SneakerRepository: Repository {
-    func read(id: String) async throws -> SneakerEntity
+protocol DTOMappable {
+    associatedtype DTO
+    
+    var toDTO: DTO { get }
 }

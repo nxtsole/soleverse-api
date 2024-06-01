@@ -11,8 +11,22 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Foundation
+import Domain
+import Vapor
 
-public protocol SneakerRepository: Repository {
-    func read(id: String) async throws -> SneakerEntity
+// MARK: - CollaboratorDTO
+
+struct CollaboratorDTO: Content {
+    
+    // MARK: - Properties
+    
+    let id: Int
+    let name: String
+    let history: String?
+}
+
+// MARK: - CollaboratorEntity
+
+extension CollaboratorEntity: DTOMappable {
+    var toDTO: CollaboratorDTO { CollaboratorDTO(id: id, name: name, history: history) }
 }

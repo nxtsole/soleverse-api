@@ -29,7 +29,7 @@ public struct DatabaseSneakerRepository: SneakerRepository {
     
     // MARK: - Public Method(s)
     
-    public func read(id: Int) async throws -> SneakerEntity {
+    public func read(id: String) async throws -> SneakerEntity {
         let model = try await SneakerModel
             .query(on: request.db)
             .field(\.$id)
