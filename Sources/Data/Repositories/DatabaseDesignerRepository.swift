@@ -32,12 +32,12 @@ public struct DatabaseDesignerRepository: DesignerRepository {
     public func read(id: Int) async throws -> DesignerEntity {
         let model = try await DesignerModel
             .query(on: request.db)
+            .filter(\.$id == id)
             .field(\.$id)
             .field(\.$name)
             .field(\.$history)
             .with(\.$silhouettes)
             .with(\.$brandsWorkedAt)
-            .filter(\.$id == id)
             .first()
         
         guard let model else { throw Abort(.notFound) }

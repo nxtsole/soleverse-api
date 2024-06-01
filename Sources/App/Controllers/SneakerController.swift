@@ -31,7 +31,7 @@ struct SneakerController: RouteCollection {
     // MARK: - Private Method(s)
     
     private func read(request: Request) async throws -> SneakerDTO {
-        guard let sneakerId = request.parameters.get(":sneakerId") else {
+        guard let sneakerId = request.parameters.get("sneakerId") else {
             throw Abort(.badRequest, reason: "The sneaker object identifier is required")
         }
         

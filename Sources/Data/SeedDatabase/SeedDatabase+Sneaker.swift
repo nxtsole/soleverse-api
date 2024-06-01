@@ -40,13 +40,13 @@ extension SneakerModel {
                      sku: String?,
                      designers: [DesignerModel.Designers],
                      collaborators: [CollaboratorModel.Collaborators],
-                     brand: BrandModel.IDValue,
+                     brand: BrandModel.Brands,
                      silhouette: SilhouetteModel.Silhouettes?,
                      materials: String?,
                      imageFields: Image.Options?,
                      on database: Database) async throws {
         try await self.init(
-            id: "\(id)-\(brand.rawValue)",
+            id: brand.sneakerId(id),
             name: name,
             history: history,
             nickName: nickName,
@@ -56,11 +56,26 @@ extension SneakerModel {
             sku: sku,
             designers: designers.map(\.rawValue),
             collaborators: collaborators.map(\.rawValue),
-            brand: brand,
+            brand: brand.rawValue,
             silhouette: silhouette.flatMap { $0.id },
             materials: materials,
             imageFields: imageFields,
             on: database
         )
+    }
+}
+
+// MARK: - Brands
+
+private extension BrandModel.Brands {
+    func sneakerId(_ id: Int) -> String {
+        let name: String
+        
+        switch self {
+        case .airJordan:
+            name = "AIR_JORDAN"
+        }
+        
+        return "\(id)-\(name)"
     }
 }

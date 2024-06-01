@@ -14,5 +14,5 @@
 import Foundation
 
 public protocol SilhouetteRepository: Repository {
-    func read(id: Int) async throws -> SilhouetteEntity
+    func read(id: String) async throws -> SilhouetteEntity
 }

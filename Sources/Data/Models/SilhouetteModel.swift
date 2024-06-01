@@ -78,16 +78,13 @@ extension SilhouetteModel {
         // MARK: - Public Method(s)
         
         func prepare(on database: Database) async throws {
-            let brandType = try await database
-                .enum("brand_type")
-                .read()
-            
             try await database
                 .schema(SilhouetteModel.schema)
-                .id()
+                .field("id", .string, .required, .identifier(auto: false))
+                .unique(on: "id")
                 .field("name", .string, .required)
                 .field("history", .string)
-                .field("brand", brandType, .required, .references(BrandModel.schema, "id"))
+                .field("brand", .int, .required, .references(BrandModel.schema, "id"))
                 .unique(on: "brand")
                 .create()
         }

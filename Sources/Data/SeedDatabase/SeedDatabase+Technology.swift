@@ -17,7 +17,7 @@ import Fluent
 
 extension SeedDatabase {
     func prepareTechnologies(on database: Database) async throws {
-        try await TechnologyModel(technology: .air, name: "Air", history: nil, brandId: .airJordan, on: database)
+        try await TechnologyModel(technology: .air, name: "Air", history: nil, brand: .airJordan, on: database)
     }
     
     func revertTechnologies(on database: Database) async throws {
@@ -39,8 +39,8 @@ private extension TechnologyModel {
     convenience init(technology: Technologies,
                      name: String,
                      history: String?,
-                     brandId: BrandModel.IDValue,
+                     brand: BrandModel.Brands,
                      on database: Database) async throws {
-        try await self.init(id: technology.rawValue, name: name, history: history, brandId: brandId, on: database)
+        try await self.init(id: technology.rawValue, name: name, history: history, brandId: brand.rawValue, on: database)
     }
 }

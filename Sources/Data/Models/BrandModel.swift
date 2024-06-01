@@ -23,7 +23,7 @@ final class BrandModel: Model {
     static let schema = "brands"
     
     @ID(custom: "id", generatedBy: .user)
-    var id: BrandType?
+    var id: Int?
     
     @Field(key: "name")
     var name: String
@@ -42,7 +42,7 @@ final class BrandModel: Model {
     init() {}
     
     @discardableResult
-    init(id: BrandType, name: String, history: String? = nil, on database: Database) async throws {
+    init(id: Int, name: String, history: String?, on database: Database) async throws {
         self.id = id
         self.name = name
         self.history = history
@@ -62,14 +62,9 @@ extension BrandModel {
         // MARK: - Public Method(s)
         
         func prepare(on database: Database) async throws {
-            let brandType = try await database
-                .enum("brand_type")
-                .case(BrandType.airJordan.rawValue)
-                .create()
-            
             try await database
                 .schema(BrandModel.schema)
-                .field("id", brandType, .required, .identifier(auto: false))
+                .field("id", .int, .required, .identifier(auto: false))
                 .unique(on: "id")
                 .field("name", .string, .required)
                 .field("history", .string)
@@ -78,7 +73,6 @@ extension BrandModel {
         
         func revert(on database: Database) async throws {
             try await database.schema(BrandModel.schema).delete()
-            try await database.enum("brand_type").delete()
         }
     }
 }

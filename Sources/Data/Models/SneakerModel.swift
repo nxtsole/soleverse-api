@@ -254,21 +254,18 @@ extension SneakerModel {
         // MARK: - Public Method(s)
         
         func prepare(on database: Database) async throws {
-            let brandType = try await database
-                .enum("brand_type")
-                .read()
-            
             try await database
                 .schema(SneakerModel.schema)
-                .id()
+                .field("id", .string, .required, .identifier(auto: false))
+                .unique(on: "id")
                 .field("name", .string)
                 .field("history", .string)
                 .field("nick_name", .string)
                 .field("color_way", .string)
-                .field("release_data", .date)
+                .field("release_date", .date)
                 .field("retail_price", .double)
                 .field("sku", .string)
-                .field("brand", brandType, .required, .references(BrandModel.schema, "id"))
+                .field("brand", .int, .required, .references(BrandModel.schema, "id"))
                 .unique(on: "brand")
                 .field("silhouette", .string, .references(SilhouetteModel.schema, "id"))
                 .unique(on: "silhouette")

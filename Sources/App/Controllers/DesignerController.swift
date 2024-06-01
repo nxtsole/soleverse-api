@@ -31,7 +31,7 @@ struct DesignerController: RouteCollection {
     // MARK: - Private Method(s)
     
     private func read(request: Request) async throws -> DesignerDTO {
-        guard let designerId: Int = request.parameters.get(":designerId") else {
+        guard let designerId: Int = request.parameters.get("designerId") else {
             throw Abort(.badRequest, reason: "The designer object identifier is required")
         }
         

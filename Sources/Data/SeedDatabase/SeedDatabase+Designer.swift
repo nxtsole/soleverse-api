@@ -40,8 +40,15 @@ private extension DesignerModel {
                      name: String,
                      history: String?,
                      silhouettes: [SilhouetteModel.Silhouettes],
-                     brandsWorkedAt: [BrandModel.IDValue],
+                     brandsWorkedAt: [BrandModel.Brands],
                      on database: Database) async throws {
-        try await self.init(id: designer.rawValue, name: name, history: history, silhouettes: silhouettes.map(\.id), brandsWorkedAt: brandsWorkedAt, on: database)
+        try await self.init(
+            id: designer.rawValue,
+            name: name,
+            history: history,
+            silhouettes: silhouettes.map(\.id),
+            brandsWorkedAt: brandsWorkedAt.map(\.rawValue),
+            on: database
+        )
     }
 }

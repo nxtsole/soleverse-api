@@ -17,7 +17,7 @@ import Fluent
 
 extension SeedDatabase {
     func prepareAirJordanSilhouettes(on database: Database) async throws {
-        try await SilhouetteModel(silhouette: .oneHigh, name: "Air Jordan 1 High", history: nil, brandId: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .oneHigh, name: "Air Jordan 1 High", history: nil, brand: .airJordan, technologies: [.air], on: database)
     }
 }
 
@@ -37,14 +37,14 @@ private extension SilhouetteModel {
     convenience init(silhouette: Silhouettes.AirJordan,
                      name: String,
                      history: String?,
-                     brandId: BrandModel.IDValue,
+                     brand: BrandModel.Brands,
                      technologies: [TechnologyModel.Technologies],
                      on database: Database) async throws {
         try await self.init(
             silhouette: .airJordan(silhouette),
             name: name,
             history: history,
-            brandId: brandId,
+            brandId: brand.rawValue,
             technologies: technologies,
             on: database
         )

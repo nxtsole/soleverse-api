@@ -36,15 +36,11 @@ struct BrandController: RouteCollection {
     }
     
     private func read(request: Request) async throws -> BrandDTO {
-        guard let brandId = request.parameters.get(":brandId") else {
-            throw Abort(.badRequest, reason: "The brand type is required")
+        guard let brandId: Int = request.parameters.get("brandId") else {
+            throw Abort(.badRequest, reason: "The brand object identifier is required")
         }
         
-        guard let brandType = BrandType(rawValue: brandId) else {
-            throw Abort(.badRequest, reason: "Given brand type is not supported yet")
-        }
-        
-        return try await request.repository.read(id: brandType).toDTO
+        return try await request.repository.read(id: brandId).toDTO
     }
 }
 

@@ -53,15 +53,11 @@ extension DesignerBrandPivotModel {
         // MARK: - Public Method(s)
         
         func prepare(on database: Database) async throws {
-            let brandType = try await database
-                .enum("brand_type")
-                .read()
-            
             try await database
                 .schema(DesignerBrandPivotModel.schema)
                 .id()
                 .field("designer_id", .int, .required, .references(DesignerModel.schema, "id", onDelete: .cascade))
-                .field("brand_id", brandType, .required, .references(BrandModel.schema, "id", onDelete: .cascade))
+                .field("brand_id", .int, .required, .references(BrandModel.schema, "id", onDelete: .cascade))
                 .create()
         }
         

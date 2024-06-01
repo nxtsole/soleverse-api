@@ -15,5 +15,5 @@ import Foundation
 
 public protocol BrandRepository: Repository {
     func read() async throws -> [BrandEntity]
-    func read(id: BrandType) async throws -> BrandEntity
+    func read(id: Int) async throws -> BrandEntity
 }

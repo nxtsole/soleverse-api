@@ -20,7 +20,7 @@ struct BrandDTO: Content {
     
     // MARK: - Properties
     
-    let id: BrandType
+    let id: Int
     let name: String
     let history: String?
 }

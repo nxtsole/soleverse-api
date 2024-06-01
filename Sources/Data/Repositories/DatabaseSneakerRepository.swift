@@ -32,6 +32,7 @@ public struct DatabaseSneakerRepository: SneakerRepository {
     public func read(id: String) async throws -> SneakerEntity {
         let model = try await SneakerModel
             .query(on: request.db)
+            .filter(\.$id == id)
             .field(\.$id)
             .field(\.$name)
             .field(\.$history)
@@ -46,7 +47,6 @@ public struct DatabaseSneakerRepository: SneakerRepository {
             .with(\.$silhouette)
             .field(\.$materials)
             .field(\.$imageFields)
-            .filter(\.$id == id)
             .first()
         
         guard let model else { throw Abort(.notFound) }

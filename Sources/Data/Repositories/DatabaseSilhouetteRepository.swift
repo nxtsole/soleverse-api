@@ -29,15 +29,15 @@ public struct DatabaseSilhouetteRepository: SilhouetteRepository {
     
     // MARK: - Public Method(s)
     
-    public func read(id: Int) async throws -> SilhouetteEntity {
+    public func read(id: String) async throws -> SilhouetteEntity {
         let model = try await SilhouetteModel
             .query(on: request.db)
+            .filter(\.$id == id)
             .field(\.$id)
             .field(\.$name)
             .field(\.$history)
             .with(\.$brand)
             .with(\.$technologies)
-            .filter(\.$id == id)
             .first()
         
         guard let model else { throw Abort(.notFound) }

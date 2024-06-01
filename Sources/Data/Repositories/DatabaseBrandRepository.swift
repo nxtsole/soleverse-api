@@ -39,11 +39,11 @@ public struct DatabaseBrandRepository: BrandRepository {
             .map { try $0.toEntity }
     }
     
-    public func read(id: BrandType) async throws -> BrandEntity {
+    public func read(id: Int) async throws -> BrandEntity {
         let model = try await BrandModel
             .query(on: request.db)
-            .queryFields()
             .filter(\.$id == id)
+            .queryFields()
             .first()
         
         guard let model else { throw Abort(.notFound) }

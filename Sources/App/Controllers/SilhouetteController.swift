@@ -31,7 +31,7 @@ struct SilhouetteController: RouteCollection {
     // MARK: - Private Method(s)
     
     private func read(request: Request) async throws -> SilhouetteDTO {
-        guard let silhouetteId: Int = request.parameters.get(":silhouetteId") else {
+        guard let silhouetteId = request.parameters.get("silhouetteId") else {
             throw Abort(.badRequest, reason: "The silhouette object identifier is required")
         }
         

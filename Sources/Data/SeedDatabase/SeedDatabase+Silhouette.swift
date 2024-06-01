@@ -11,7 +11,6 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Domain
 import Fluent
 
 // MARK: - SeedDatabase
@@ -35,7 +34,7 @@ extension SilhouetteModel {
         var id: String {
             switch self {
             case let .airJordan(airJordan):
-                "\(airJordan.rawValue)-\(BrandType.airJordan.rawValue)"
+                BrandModel.Brands.airJordan.silhouetteId(airJordan)
             }
         }
     }
@@ -55,5 +54,13 @@ extension SilhouetteModel {
             technologies: technologies.map(\.rawValue),
             on: database
         )
+    }
+}
+
+// MARK: - Brands
+
+private extension BrandModel.Brands {
+    func silhouetteId<R: RawRepresentable>(_ id: R) -> String where R.RawValue == Int {
+        "\(id)-\(rawValue)"
     }
 }

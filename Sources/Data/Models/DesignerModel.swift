@@ -83,7 +83,8 @@ extension DesignerModel {
         func prepare(on database: Database) async throws {
             try await database
                 .schema(DesignerModel.schema)
-                .id()
+                .field("id", .int, .required, .identifier(auto: false))
+                .unique(on: "id")
                 .field("name", .string, .required)
                 .field("history", .string)
                 .create()

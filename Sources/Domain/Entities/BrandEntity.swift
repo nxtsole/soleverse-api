@@ -13,22 +13,13 @@
 
 import Foundation
 
-// MARK: - BrandType
-
-/// Supported sneaker brands that the SoleVerse API can provide information about.
-public enum BrandType: String, CaseIterable, Codable {
-    case airJordan = "AIR_JORDAN"
-}
-
-// MARK: - BrandEntity
-
 /// An entity representing a sneaker brand that created different types of silhouettes.
 public struct BrandEntity {
     
     // MARK: - Properties
     
     /// The object identifier uniquely identifying the brand in the database.
-    public let id: BrandType
+    public let id: Int
     
     /// Returns the name of the brand.
     public let name: String
@@ -38,7 +29,7 @@ public struct BrandEntity {
     
     // MARK: - Initializer(s)
     
-    public init(id: BrandType, name: String, history: String?) {
+    public init(id: Int, name: String, history: String?) {
         self.id = id
         self.name = name
         self.history = history

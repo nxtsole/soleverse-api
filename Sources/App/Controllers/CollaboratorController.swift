@@ -31,7 +31,7 @@ struct CollaboratorController: RouteCollection {
     // MARK: - Private Method(s)
     
     private func read(request: Request) async throws -> CollaboratorDTO {
-        guard let collaboratorId: Int = request.parameters.get(":collaboratorId") else {
+        guard let collaboratorId: Int = request.parameters.get("collaboratorId") else {
             throw Abort(.badRequest, reason: "The collaborator object identifier is required")
         }
         
