@@ -66,7 +66,6 @@ extension Application {
 // MARK: - Setup
 
 func setupRepositories(_ app: Application) {
-    app.repositories.register(.todo) { DatabaseTodoRepository($0) }
     app.repositories.register(.brand) { DatabaseBrandRepository($0) }
     app.repositories.register(.technology) { DatabaseTechnologyRepository($0) }
     app.repositories.register(.silhouette) { DatabaseSilhouetteRepository($0) }

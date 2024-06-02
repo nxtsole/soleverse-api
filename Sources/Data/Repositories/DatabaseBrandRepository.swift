@@ -15,8 +15,6 @@ import Domain
 import Fluent
 import Vapor
 
-// MARK: - DatabaseBrandRepository
-
 public struct DatabaseBrandRepository: BrandRepository {
     
     // MARK: - Properties
@@ -42,15 +40,5 @@ public struct DatabaseBrandRepository: BrandRepository {
         guard let model = try await BrandModel.find(id, on: request.db) else { throw Abort(.notFound) }
         
         return try model.toEntity
-    }
-}
-
-// MARK: - QueryBuilder
-
-private extension QueryBuilder where Model == BrandModel {
-    func queryFields() -> QueryBuilder<Model> {
-        field(\.$id)
-        .field(\.$name)
-        .field(\.$history)
     }
 }

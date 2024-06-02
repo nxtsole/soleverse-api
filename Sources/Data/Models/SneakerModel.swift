@@ -86,6 +86,7 @@ final class SneakerModel: Model {
          on database: Database) async throws {
         self.id = id
         self.name = name
+        self.history = history
         self.nickName = nickName
         self.colorWay = colorWay
         self.releaseDate = releaseDate

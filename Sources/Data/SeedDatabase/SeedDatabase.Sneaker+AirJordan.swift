@@ -22,7 +22,7 @@ extension SeedDatabase {
             history: "Conceptualized by Peter Moore, the Air Jordan 1 High 'Chicago' 1985 shoe changed the way people regarded sneakers forever. This first edition honors the Chicago Bulls team colors in a full-grain leather build complete with sleek Swooshes, Wings branding and a molded collar. Nike Air cushioning is embedded in the midsole, while a modified herringbone outsole provides traction.",
             nickName: "Chicago",
             colorWay: "White/Black-Varsity Red",
-            releaseDate: DateComponents(year: 1985, month: 9, day: 14).date,
+            releaseDate: DateComponents(calendar: .current, year: 1985, month: 9, day: 14).date,
             retailPrice: nil,
             sku: "4280",
             designers: [.peterMoore],

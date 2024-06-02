@@ -34,25 +34,20 @@ final class AppTests: XCTestCase {
     
     // MARK: - Test(s)
     
-    func testHelloWorld() async throws {
+    func testGetAllBrands() async throws {
+        // Given
         let app = try await Application.makeTestable()
-        defer { app.shutdown() }
-
-        try app.test(.GET, "hello") { response in
-            XCTAssertEqual(response.status, .ok)
-            XCTAssertEqual(response.body.string, "Hello, world!")
-        }
-    }
-    
-    func testCreate() async throws {
-        let app = try await Application.makeTestable()
+        
         defer { app.shutdown() }
         
-        try app.test(.POST, "todos") { request in
-            try request.content.encode(["title": "Test"])
-        } afterResponse: { response in
-            let todo = try response.content.decode(TodoResponse.self)
-            XCTAssertEqual(todo.title, "Test")
+        // When
+        try app.test(.GET, "api/v1/brands") { response in
+            // Then
+            XCTAssertEqual(response.status, .ok)
+            
+            let brands = try response.content.decode([BrandDTO].self)
+            
+            XCTAssertTrue(brands.contains { $0.name == "Air Jordan" })
         }
     }
 }
