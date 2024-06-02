@@ -61,6 +61,6 @@ extension SilhouetteModel {
 
 private extension BrandModel.Brands {
     func silhouetteId<R: RawRepresentable>(_ id: R) -> String where R.RawValue == Int {
-        "\(id)-\(rawValue)"
+        "\(id.rawValue)-\(rawValue)"
     }
 }

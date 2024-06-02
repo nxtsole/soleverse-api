@@ -103,12 +103,24 @@ extension DesignerModel: EntityMappable {
         get throws {
             guard let id else { throw DomainError.somethingWrong("id is missing in DesignerModel") }
             
+            var silhouetteEntities = [SilhouetteEntity]()
+            
+            if $silhouettes.value != nil {
+                silhouetteEntities = try silhouettes.map { try $0.toEntity }
+            }
+            
+            var brandEntities = [BrandEntity]()
+            
+            if $brandsWorkedAt.value != nil {
+                brandEntities = try brandsWorkedAt.map { try $0.toEntity }
+            }
+            
             return DesignerEntity(
                 id: id,
                 name: name,
                 history: history,
-                silhouettes: try silhouettes.map { try $0.toEntity },
-                brandsWorkedAt: try brandsWorkedAt.map { try $0.toEntity }
+                silhouettes: silhouetteEntities,
+                brandsWorkedAt: brandEntities
             )
         }
     }

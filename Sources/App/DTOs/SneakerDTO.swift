@@ -28,8 +28,8 @@ struct SneakerDTO: Content {
     let releaseDate: Date?
     let retailPrice: Double?
     let sku: String?
-    let designers: [DesignerDTO]
-    let collaborators: [CollaboratorDTO]
+    let designers: [DesignerDTO]?
+    let collaborators: [CollaboratorDTO]?
     let brand: BrandDTO
     let silhouette: SilhouetteDTO?
     let materials: String?
@@ -67,8 +67,8 @@ extension SneakerEntity: DTOMappable {
             releaseDate: releaseDate,
             retailPrice: retailPrice,
             sku: sku,
-            designers: designers.map(\.toDTO),
-            collaborators: collaborators.map(\.toDTO),
+            designers: designers.isEmpty ? nil : designers.map(\.toDTO),
+            collaborators: collaborators.isEmpty ? nil : collaborators.map(\.toDTO),
             brand: brand.toDTO,
             silhouette: silhouette.flatMap { $0.toDTO },
             materials: materials,

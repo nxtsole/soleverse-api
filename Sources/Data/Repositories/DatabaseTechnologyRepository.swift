@@ -32,9 +32,6 @@ public struct DatabaseTechnologyRepository: TechnologyRepository {
     public func read(id: Int) async throws -> TechnologyEntity {
         let model = try await TechnologyModel
             .query(on: request.db)
-            .filter(\.$id == id)
-            .field(\.$id)
-            .field(\.$name)
             .with(\.$brand)
             .first()
         

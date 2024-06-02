@@ -30,15 +30,7 @@ public struct DatabaseCollaboratorRepository: CollaboratorRepository {
     // MARK: - Public Method(s)
     
     public func read(id: Int) async throws -> CollaboratorEntity {
-        let model = try await CollaboratorModel
-            .query(on: request.db)
-            .filter(\.$id == id)
-            .field(\.$id)
-            .field(\.$name)
-            .field(\.$history)
-            .first()
-        
-        guard let model else { throw Abort(.notFound) }
+        guard let model = try await CollaboratorModel.find(id, on: request.db) else { throw Abort(.notFound) }
         
         return try model.toEntity
     }

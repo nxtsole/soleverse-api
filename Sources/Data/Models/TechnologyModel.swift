@@ -87,7 +87,19 @@ extension TechnologyModel: EntityMappable {
     var toEntity: TechnologyEntity {
         get throws {
             guard let id else { throw DomainError.somethingWrong("id is missing in TechnologyModel") }
-            return TechnologyEntity(id: id, name: name, history: history, brand: try brand.toEntity)
+            
+            var brandEntity = BrandEntity(id: $brand.id, name: "", history: nil)
+            
+            if $brand.value != nil {
+                brandEntity = try brand.toEntity
+            }
+            
+            return TechnologyEntity(
+                id: id,
+                name: name,
+                history: history,
+                brand: brandEntity
+            )
         }
     }
 }

@@ -33,9 +33,6 @@ public struct DatabaseDesignerRepository: DesignerRepository {
         let model = try await DesignerModel
             .query(on: request.db)
             .filter(\.$id == id)
-            .field(\.$id)
-            .field(\.$name)
-            .field(\.$history)
             .with(\.$silhouettes)
             .with(\.$brandsWorkedAt)
             .first()

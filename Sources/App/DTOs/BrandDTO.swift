@@ -21,12 +21,12 @@ struct BrandDTO: Content {
     // MARK: - Properties
     
     let id: Int
-    let name: String
+    let name: String?
     let history: String?
 }
 
 // MARK: - BrandEntity
 
 extension BrandEntity: DTOMappable {
-    var toDTO: BrandDTO { BrandDTO(id: id, name: name, history: history) }
+    var toDTO: BrandDTO { BrandDTO(id: id, name: name.isEmpty ? nil : name, history: history) }
 }

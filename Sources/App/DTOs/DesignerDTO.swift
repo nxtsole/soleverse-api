@@ -21,10 +21,10 @@ struct DesignerDTO: Content {
     // MARK: - Properties
     
     let id: Int
-    let name: String
+    let name: String?
     let history: String?
-    let silhouettes: [SilhouetteDTO]
-    let brandsWorkedAt: [BrandDTO]
+    let silhouettes: [SilhouetteDTO]?
+    let brandsWorkedAt: [BrandDTO]?
 }
 
 // MARK: - DesignerEntity
@@ -33,10 +33,10 @@ extension DesignerEntity: DTOMappable {
     var toDTO: DesignerDTO {
         DesignerDTO(
             id: id,
-            name: name,
+            name: name.isEmpty ? nil : name,
             history: history,
-            silhouettes: silhouettes.map(\.toDTO),
-            brandsWorkedAt: brandsWorkedAt.map(\.toDTO)
+            silhouettes: silhouettes.isEmpty ? nil : silhouettes.map(\.toDTO),
+            brandsWorkedAt: brandsWorkedAt.isEmpty ? nil : brandsWorkedAt.map(\.toDTO)
         )
     }
 }

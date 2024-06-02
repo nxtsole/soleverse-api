@@ -102,12 +102,24 @@ extension SilhouetteModel: EntityMappable {
         get throws {
             guard let id else { throw DomainError.somethingWrong("id is missing in SilhouetteModel") }
             
+            var brandEntity = BrandEntity(id: $brand.id, name: "", history: nil)
+            
+            if $brand.value != nil {
+                brandEntity = try brand.toEntity
+            }
+            
+            var technologyEntities = [TechnologyEntity]()
+            
+            if $technologies.value != nil {
+                technologyEntities = try technologies.map { try $0.toEntity }
+            }
+            
             return SilhouetteEntity(
                 id: id,
                 name: name,
-                brand: try brand.toEntity,
+                brand: brandEntity,
                 history: history,
-                technologies: try technologies.map { try $0.toEntity }
+                technologies: technologyEntities
             )
         }
     }

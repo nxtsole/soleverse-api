@@ -17,7 +17,7 @@ import Fluent
 
 extension SeedDatabase {
     func prepareCollaborators(on database: Database) async throws {
-        // TODO: - Populate Collaborators?
+        try await CollaboratorModel(collaborator: .undefeated, name: "Undefeated", history: nil, on: database)
     }
     
     func revertCollaborators(on database: Database) async throws {

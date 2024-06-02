@@ -34,19 +34,12 @@ public struct DatabaseBrandRepository: BrandRepository {
     public func read() async throws -> [BrandEntity] {
         try await BrandModel
             .query(on: request.db)
-            .queryFields()
             .all()
             .map { try $0.toEntity }
     }
     
     public func read(id: Int) async throws -> BrandEntity {
-        let model = try await BrandModel
-            .query(on: request.db)
-            .filter(\.$id == id)
-            .queryFields()
-            .first()
-        
-        guard let model else { throw Abort(.notFound) }
+        guard let model = try await BrandModel.find(id, on: request.db) else { throw Abort(.notFound) }
         
         return try model.toEntity
     }

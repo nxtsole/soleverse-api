@@ -33,20 +33,12 @@ public struct DatabaseSneakerRepository: SneakerRepository {
         let model = try await SneakerModel
             .query(on: request.db)
             .filter(\.$id == id)
-            .field(\.$id)
-            .field(\.$name)
-            .field(\.$history)
-            .field(\.$nickName)
-            .field(\.$colorWay)
-            .field(\.$releaseDate)
-            .field(\.$releaseDate)
-            .field(\.$sku)
+            .with(\.$brand)
             .with(\.$designers)
             .with(\.$collaborators)
-            .with(\.$brand)
-            .with(\.$silhouette)
-            .field(\.$materials)
-            .field(\.$imageFields)
+            .with(\.$silhouette) { silhouette in
+                silhouette.with(\.$technologies)
+            }
             .first()
         
         guard let model else { throw Abort(.notFound) }

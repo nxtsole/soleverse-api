@@ -33,9 +33,6 @@ public struct DatabaseSilhouetteRepository: SilhouetteRepository {
         let model = try await SilhouetteModel
             .query(on: request.db)
             .filter(\.$id == id)
-            .field(\.$id)
-            .field(\.$name)
-            .field(\.$history)
             .with(\.$brand)
             .with(\.$technologies)
             .first()

@@ -24,7 +24,7 @@ struct SilhouetteDTO: Content {
     let name: String
     let brand: BrandDTO
     let history: String?
-    let technologies: [TechnologyDTO]
+    let technologies: [TechnologyDTO]?
 }
 
 // MARK: - SilhouetteEntity
@@ -36,7 +36,7 @@ extension SilhouetteEntity: DTOMappable {
             name: name,
             brand: brand.toDTO,
             history: history,
-            technologies: technologies.map(\.toDTO)
+            technologies: technologies.isEmpty ? nil : technologies.map(\.toDTO)
         )
     }
 }
