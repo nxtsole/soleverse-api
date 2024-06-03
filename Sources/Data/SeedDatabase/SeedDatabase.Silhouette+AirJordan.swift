@@ -18,6 +18,8 @@ import Fluent
 extension SeedDatabase {
     func prepareAirJordanSilhouettes(on database: Database) async throws {
         try await SilhouetteModel(silhouette: .oneHigh, name: "Air Jordan 1 High", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .oneLow, name: "Air Jordan 1 Low", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .skyOneHigh, name: "Sky Jordan 1 High", history: nil, brand: .airJordan, technologies: [], on: database)
     }
 }
 
@@ -26,6 +28,8 @@ extension SeedDatabase {
 extension SilhouetteModel.Silhouettes {
     enum AirJordan: Int {
         case oneHigh
+        case oneLow
+        case skyOneHigh
     }
 }
 
