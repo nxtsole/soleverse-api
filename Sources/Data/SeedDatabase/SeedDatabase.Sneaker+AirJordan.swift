@@ -339,5 +339,73 @@ extension SeedDatabase {
             imageFields: [.lateral],
             on: database
         )
+        try await SneakerModel(
+            id: 19,
+            name: "Air Jordan 2 OG 'Chicago' 1986",
+            history: nil,
+            nickName: "Chicago",
+            colorWay: "White/Black/Varsity Red",
+            releaseDate: DateComponents(calendar: .current, year: 1986, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4360",
+            designers: [.bruceKilgore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.two),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 20,
+            name: "Air Jordan 2 OG 'White Red' 1986",
+            history: nil,
+            nickName: "White Red",
+            colorWay: "White/Red",
+            releaseDate: DateComponents(calendar: .current, year: 1986, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4361",
+            designers: [.bruceKilgore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.two),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 21,
+            name: "Air Jordan 2 Low OG 'Chicago' 1986",
+            history: nil,
+            nickName: "Chicago",
+            colorWay: "White/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1986, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4115",
+            designers: [.bruceKilgore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.twoLow),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 22,
+            name: "Air Jordan 2 Low OG 'White Red' 1986",
+            history: nil,
+            nickName: "White Red",
+            colorWay: "White/Red",
+            releaseDate: DateComponents(calendar: .current, year: 1986, month: 1, day: 2).date,
+            retailPrice: nil,
+            sku: "4116",
+            designers: [.bruceKilgore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.twoLow),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
     }
 }
