@@ -30,6 +30,17 @@ extension SeedDatabase {
 extension BrandModel {
     enum Brands: Int {
         case airJordan
+        
+        func modelId(_ id: Int) -> String {
+            let name: String
+            
+            switch self {
+            case .airJordan:
+                name = "AIR_JORDAN"
+            }
+            
+            return "\(id)-\(name)"
+        }
     }
     
     @discardableResult

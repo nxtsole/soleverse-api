@@ -34,7 +34,7 @@ extension SilhouetteModel {
         var id: String {
             switch self {
             case let .airJordan(airJordan):
-                BrandModel.Brands.airJordan.silhouetteId(airJordan)
+                BrandModel.Brands.airJordan.modelId(airJordan.rawValue)
             }
         }
     }
@@ -54,13 +54,5 @@ extension SilhouetteModel {
             technologies: technologies.map(\.rawValue),
             on: database
         )
-    }
-}
-
-// MARK: - Brands
-
-private extension BrandModel.Brands {
-    func silhouetteId<R: RawRepresentable>(_ id: R) -> String where R.RawValue == Int {
-        "\(id.rawValue)-\(rawValue)"
     }
 }

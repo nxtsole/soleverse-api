@@ -46,7 +46,7 @@ extension SneakerModel {
                      imageFields: Image.Options?,
                      on database: Database) async throws {
         try await self.init(
-            id: brand.sneakerId(id),
+            id: brand.modelId(id),
             name: name,
             history: history,
             nickName: nickName,
@@ -62,20 +62,5 @@ extension SneakerModel {
             imageFields: imageFields,
             on: database
         )
-    }
-}
-
-// MARK: - Brands
-
-private extension BrandModel.Brands {
-    func sneakerId(_ id: Int) -> String {
-        let name: String
-        
-        switch self {
-        case .airJordan:
-            name = "AIR_JORDAN"
-        }
-        
-        return "\(id)-\(name)"
     }
 }

@@ -71,7 +71,6 @@ extension TechnologyModel {
                 .field("name", .string, .required)
                 .field("history", .string)
                 .field("brand", .int, .required, .references(BrandModel.schema, "id"))
-                .unique(on: "brand")
                 .create()
         }
         
