@@ -17,8 +17,43 @@ import Fluent
 
 extension SeedDatabase {
     func prepareDesigners(on database: Database) async throws {
-        try await DesignerModel(designer: .peterMoore, name: "Peter Moore", history: nil, silhouettes: [.airJordan(.oneHigh)], brandsWorkedAt: [.airJordan], on: database)
-        try await DesignerModel(designer: .bruceKilgore, name: "Bruce Kilgore", history: nil, silhouettes: [.airJordan(.two)], brandsWorkedAt: [.airJordan], on: database)
+        try await DesignerModel(
+            designer: .peterMoore,
+            name: "Peter Moore",
+            history: nil,
+            silhouettes: [
+                .airJordan(.oneHigh),
+                .airJordan(.oneLow)
+            ],
+            brandsWorkedAt: [
+                .airJordan
+            ],
+            on: database
+        )
+        try await DesignerModel(
+            designer: .bruceKilgore,
+            name: "Bruce Kilgore",
+            history: nil,
+            silhouettes: [
+                .airJordan(.two)
+            ],
+            brandsWorkedAt: [
+                .airJordan
+            ],
+            on: database
+        )
+        try await DesignerModel(
+            designer: .tinkerHatfield,
+            name: "Tinker Hatfield",
+            history: nil,
+            silhouettes: [
+                .airJordan(.three)
+            ],
+            brandsWorkedAt: [
+                .airJordan
+            ],
+            on: database
+        )
     }
     
     func revertDesigners(on database: Database) async throws {
@@ -32,6 +67,7 @@ extension DesignerModel {
     enum Designers: Int {
         case peterMoore
         case bruceKilgore
+        case tinkerHatfield
     }
 }
 

@@ -407,5 +407,73 @@ extension SeedDatabase {
             imageFields: [.lateral],
             on: database
         )
+        try await SneakerModel(
+            id: 23,
+            name: "Air Jordan 3 OG 'White Cement' 1988",
+            history: "The Air Jordan 3 was originally released in 1988 following Michael Jordan’s famous win of the NBA Slam Dunk Contest from the free throw line. It is the first Air Jordan by legendary designer Tinker Hatfield and the first to drop the Wings logo for the iconic Jumpman logo. Additionally, the design is the first Air Jordan to feature visible Air units and elephant print on the upper. The white and Grey Cement colorway is the first of four classic colorways and the colorway of choice for Jordan’s 1988 Dunk Contest.",
+            nickName: "White Cement",
+            colorWay: "White/Cement Grey",
+            releaseDate: DateComponents(calendar: .current, year: 1988, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "4365",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.three),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 24,
+            name: "Air Jordan 3 OG 'Fire Red' 1988",
+            history: "Originally released in 1988, the Air Jordan 3 OG ‘Fire Red’ features a white leather upper with Fire Red accents on the eyelets, collar, and midsole. The sneaker also boasts the iconic elephant print on the toe cap and heel and a partially encapsulated Air unit in the midsole. Matching well with the Chicago Bulls uniforms, Michael Jordan wore them for a bulk of the 1988 NBA season.",
+            nickName: "Fire Red",
+            colorWay: "White/Fire Red",
+            releaseDate: DateComponents(calendar: .current, year: 1988, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "4367",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.three),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 25,
+            name: "Air Jordan 3 OG 'Black Cement' 1988",
+            history: "The Air Jordan 3 kicked off Tinker Hatfield’s legendary partnership with Michael Jordan and his signature line. The silhouette, showcased here in the OG black colorway, debuted the now-iconic elephant print, as well as the brand’s Jumpman logo. The sculpted polyurethane midsole introduced another first to the Jordan line, a visible Air Sole unit borrowed from Tinker’s groundbreaking Air Max 1 from the previous year.",
+            nickName: "Black Cement",
+            colorWay: "Black/Cement Grey",
+            releaseDate: DateComponents(calendar: .current, year: 1988, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "4366",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.three),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 26,
+            name: "Air Jordan 3 OG 'True Blue' 1988",
+            history: "Released in 1988, the Air Jordan 3 OG ‘True Blue’ colorway was the first Air Jordan to stray from the Chicago Bulls colors of white, black and red. The design is defined by a white tumbled leather upper, Cement Grey detailing, and True Blue accents as well as an original Fire Red inner tongue and insole.",
+            nickName: "True Blue",
+            colorWay: "White/Cement Grey/True Blue",
+            releaseDate: DateComponents(calendar: .current, year: 1988, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "4368",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.three),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
     }
 }
