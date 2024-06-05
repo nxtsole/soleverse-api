@@ -475,5 +475,73 @@ extension SeedDatabase {
             imageFields: [.lateral],
             on: database
         )
+        try await SneakerModel(
+            id: 27,
+            name: "Air Jordan 4 OG 'White Cement' 1989",
+            history: "The ‘White Cement’ version of the Air Jordan OG 4 was one of four original colorways released in 1989 and the first to make an appearance in a feature film, Spike Lee’s “Do The Right Thing.” It features a crisp white leather-based upper with matching over-molded mesh and a style-defining cement pattern on the heel, technical strap, and midsole. Red Jumpman branding adds a pop of color to the tongue while a black Nike Air logo adorns the heel in black.",
+            nickName: "White Cement",
+            colorWay: "White/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1989, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4362",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 28,
+            name: "Air Jordan 4 OG 'Military Blue' 1989",
+            history: "The Air Jordan 4 OG transcended the game of basketball to make a significant impact on pop culture when it first released in 1989. This 'Military Blue' color works a non-traditional palette on the leather, nubuck and mesh upper, with bold eyestays and a synthetic mudguard creating contrast. An iconic Jumpman on the tongue and Nike Air heel branding are hallmarks of the AJ4 design.",
+            nickName: "Military Blue",
+            colorWay: "Off White/Military Blue",
+            releaseDate: DateComponents(calendar: .current, year: 1989, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "4369",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 29,
+            name: "Air Jordan 4 OG 'Fire Red' 1989",
+            history: "This is the original Air Jordan 4 ‘Fire Red,’ one of four OG colorways released in 1989. Designed by Nike legend Tinker Hatfield, the shoe sports a white leather build, accented with contrasting pops of black and Fire Red throughout the upper and midsole. Distinguishing details include netting on the quarter panels, molded structural ‘wings,’ Nike Air branding on the heel panel and the visible Nike Air unit in the midsole.",
+            nickName: "Fire Red",
+            colorWay: "White/Fire Red/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1989, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "4364",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: "Leather",
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 30,
+            name: "Air Jordan 4 OG 'Bred' 1989",
+            history: "In the 1989 NBA Playoffs, Michael Jordan wowed the world by hitting ‘The Shot’, winning a game against the Cleveland Cavaliers on a buzzer beater. On his feet was the Air Jordan 4 OG. The sneaker features a black nubuck upper with mesh panels on the sides and forefoot for breathability. The sneaker also sports Cement Grey accents on the lacing system and on the inner lining of the shoe. As is tradition, the mid top sports a partially encapsulated Air Max unit in the midsole for responsive and lightweight cushioning.",
+            nickName: "Bred",
+            colorWay: "Black/Cement Grey",
+            releaseDate: DateComponents(calendar: .current, year: 1989, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "4363",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: "Nubuck",
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
     }
 }
