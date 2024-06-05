@@ -555,7 +555,7 @@ extension SeedDatabase {
             designers: [.tinkerHatfield],
             collaborators: [],
             brand: .airJordan,
-            silhouette: .airJordan(.four),
+            silhouette: .airJordan(.five),
             materials: nil,
             imageFields: [.lateral, .medial, .back],
             on: database
@@ -572,7 +572,7 @@ extension SeedDatabase {
             designers: [.tinkerHatfield],
             collaborators: [],
             brand: .airJordan,
-            silhouette: .airJordan(.four),
+            silhouette: .airJordan(.five),
             materials: nil,
             imageFields: [.lateral],
             on: database
@@ -589,7 +589,7 @@ extension SeedDatabase {
             designers: [.tinkerHatfield],
             collaborators: [],
             brand: .airJordan,
-            silhouette: .airJordan(.four),
+            silhouette: .airJordan(.five),
             materials: nil,
             imageFields: [.lateral],
             on: database
@@ -606,8 +606,110 @@ extension SeedDatabase {
             designers: [.tinkerHatfield],
             collaborators: [],
             brand: .airJordan,
-            silhouette: .airJordan(.four),
+            silhouette: .airJordan(.five),
             materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 35,
+            name: "Air Jordan 6 OG 'Black Infrared' 1991",
+            history: "The Air Jordan 6 OG 'Black Infrared' boasts a bold, textured look featuring a sleek Black/Infrared colorway in this design by Tinker Hatfield. Best known as the shoe Michael Jordan was wearing when he claimed his first championship title, the Air Jordan 6 first released in 1991 with a unique high-top silhouette style inspired by MJ’s German sports car. Thought-out details like a neoprene sleeve, visible air and a translucent rubber sole complete the design.",
+            nickName: "Infrared 1991",
+            colorWay: "Black/Infrared",
+            releaseDate: DateComponents(calendar: .current, year: 1991, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "4391",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.six),
+            materials: "Nubuck",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 36,
+            name: "Air Jordan 6 OG 'Maroon' 1991",
+            history: "The Air Jordan 6 OG features a premium off white leather upper with perforations along the sidewall and collar for breathability. The mid top also sports a toggle lacing system for a personalized fit, New Maroon details on the tongue and heel, and a partially encapsulated Air unit. The outsole features a circular traction pattern and also features clear translucent rubber for extra grip.",
+            nickName: "New Maroon",
+            colorWay: "Off White/New Maroon",
+            releaseDate: DateComponents(calendar: .current, year: 1991, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4393",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.six),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 37,
+            name: "Air Jordan 6 OG 'White Infrared' 1991",
+            history: "The Jordan 6 appears in the OG ‘White Infrared’ color scheme, featuring the same details as the pair that Michael Jordan wore during his first NBA championship run. The design itself was influenced by one of Michael Jordan’s German sports cars, combining a neoprene sleeve on the eyestay with a visible Air unit and translucent outsole for a mix of cushioning and traction.",
+            nickName: "Infrared",
+            colorWay: "White/Infared-Black",
+            releaseDate: DateComponents(calendar: .current, year: 1991, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4389",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.six),
+            materials: "Nubuck",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 38,
+            name: "Air Jordan 6 OG 'Carmine' 1991",
+            history: "One of the Air Jordan 6’s OG colorways, the ‘Carmine’ color scheme was among the five original offerings that released in 1991. Featuring a combination of leather and nubuck panels on the upper, the white overlays are highlighted by carmine red underneath. Complete with Nike Air branding on the heel, the shoe sports the a visible Air unit and a partial translucent rubber outsole.",
+            nickName: "Carmine",
+            colorWay: "White/Carmine/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1991, month: 11, day: 1).date,
+            retailPrice: nil,
+            sku: "4401",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.six),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 39,
+            name: "Air Jordan 6 OG 'Sport Blue' 1991",
+            history: "The Air Jordan 6 OG ‘Sport Blue’ sneaker boasts a non-Bulls colorway in its original 1991 release. The iconic Tinker Hatfield AJ 6 silhouette—inspired by Michael Jordan’s sports car—is best known as the shoe MJ was wearing when he claimed the first championship title of his career. The shoe features a neoprene inner sleeve, numerous perforations, visible Air cushioning and translucent accents at the sole.",
+            nickName: "Sport Blue",
+            colorWay: "White/Sport Blue/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1991, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4392",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.six),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 40,
+            name: "Air Jordan 6 OG GS 'Infrared' 1991",
+            history: nil,
+            nickName: "Infrared",
+            colorWay: "Blk/Infrared",
+            releaseDate: DateComponents(calendar: .current, year: 1991, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "8428C",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.six),
+            materials: "Nubuck",
             imageFields: [.lateral],
             on: database
         )
