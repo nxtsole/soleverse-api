@@ -543,5 +543,73 @@ extension SeedDatabase {
             imageFields: [.lateral, .medial, .back],
             on: database
         )
+        try await SneakerModel(
+            id: 31,
+            name: "Air Jordan 5 OG 'Grape' 1990",
+            history: "The Air Jordan 5 OG 'Grape' is one of four original colorways released back in 1990. Forgoing normal Chicago Bulls color cues, this AJ5 features a white leather upper with a breathable mesh side panel. Grape Ice details are found on the padded tongue and on the midsole, as well as New Emerald accents on the inner lining and midsole flame motif. The sneaker boasts a partially encapsulated Air unit for cushioning atop a translucent rubber outsole.",
+            nickName: "Grape",
+            colorWay: "White/Grape Ice/New Emerald",
+            releaseDate: DateComponents(calendar: .current, year: 1990, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "4490",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 32,
+            name: "Air Jordan 5 OG 'Fire Red' 1990",
+            history: "Over the course of the 1989-1990 NBA season, Michael Jordan put up numbers that separated him from his peers. Likening his ruthless style to American WWII fighter jets, Nike designer Tinker Hatfield stamped a shark tooth graphic on Jumpman’s fifth Air Jordan sneaker. First released in 1990, the ‘Fire Red’ model represents one of the shoe’s four OG colorways. The Air Jordan 5 gained further recognition from the original ‘It’s Gotta Be The Shoes’ commercials, a Nike campaign fronted by Mars Blackmon, Spike Lee’s character from the 1986 movie She’s Gotta Have It.",
+            nickName: "Fire Red",
+            colorWay: "White/Fire Red/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1990, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "4491",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 33,
+            name: "Air Jordan 5 OG 'White Fire Red' 1990",
+            history: nil,
+            nickName: "Fire Red",
+            colorWay: "White/Black/Fire Red",
+            releaseDate: DateComponents(calendar: .current, year: 1990, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "4383",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 34,
+            name: "Air Jordan 5 OG 'Metallic' 1990",
+            history: "Air Jordan 5 OG designer Tinker Hatfield, likened Michael Jordan's playing to that of the WWII Mustang fighter plane. Bringing back the spirit of how Jordan attacked the court, the silhouette features shark tooth shapes on the midsole reminiscent of the biting style of the military plane. Ready for flight, the February 1990 'Metallic' version is built with a durabuck upper, mesh midfoot netting and the first translucent outsole of its time.",
+            nickName: "Metallic",
+            colorWay: "Black/Black/Metallic Silver",
+            releaseDate: DateComponents(calendar: .current, year: 1990, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "4384",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.four),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
     }
 }
