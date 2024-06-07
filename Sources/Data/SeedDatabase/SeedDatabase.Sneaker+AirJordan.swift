@@ -968,5 +968,175 @@ extension SeedDatabase {
             imageFields: [.lateral],
             on: database
         )
+        try await SneakerModel(
+            id: 56,
+            name: "Air Jordan 3 Retro 1994",
+            history: "The Air Jordan 3 Retro 1994 brings back the original White/Cement colorway from 1988. It features a tumbled white leather upper with tonal stitching and a matching perforated padded collar for a snug and breathable fit. The sneaker also sports the brand’s trademark Cement Grey elephant print on the heel and toe cap, red details on the tongue lining, and a partially encapsulated Air unit in the midsole for responsive cushioning.",
+            nickName: nil,
+            colorWay: "White/Cement Grey",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130203 101",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.three),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 57,
+            name: "Air Jordan 1 Retro High 'Chicago' 1994",
+            history: "The 1994 edition of the Air Jordan 1 Retro High ‘Chicago’ represents the very first time that this iconic colorway was resurrected from the archives. Like the 1985 original, this pair sports a white leather upper with contrasting overlays in a bold red finish. The signature Swoosh is rendered in basic black, matching the sneaker’s laces, padded collar and the Jordan Wings logo that embellishes the lateral ankle. A woven Nike tag is perched atop the white nylon tongue. The high-top is mounted on a durable rubber cupsole with an Air-sole heel unit encapsulated in lightweight polyurethane.",
+            nickName: "Chicago",
+            colorWay: "White/Black-Red",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130207 101",
+            designers: [.peterMoore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.oneHigh),
+            materials: "Leather",
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 58,
+            name: "Air Jordan 2",
+            history: nil,
+            nickName: nil,
+            colorWay: "White-Red-Black",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130235 161",
+            designers: [.bruceKilgore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.two),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 59,
+            name: "Air Jordan 3 Retro 'Black Cement' 1994",
+            history: "The Air Jordan 3 Retro from 1994 first hit stores that year as part of a retro run that also spanned the 1 and 2, celebrating Michael Jordan’s legacy in the wake of his first retirement in 1993. The 3 marked several significant firsts in the Air Jordan timeline—it was the first to feature the Jumpman logo, the first to feature visible Air and the first to feature elephant print, created by Tinker Hatfield at the behest of Jordan himself. This Black/Cement tries to recreated the original from 1988, complete with elephant print and NIKE AIR on the heel.",
+            nickName: "Black Cement",
+            colorWay: "Black/Cement Grey",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130203 001",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.three),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 60,
+            name: "Air Jordan 2 Retro Low",
+            history: nil,
+            nickName: nil,
+            colorWay: "White-Red-Black",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130236 161",
+            designers: [.bruceKilgore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.twoLow),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 61,
+            name: "Air Jordan 10 OG 'Steel'",
+            history: "Planning for the Air Jordan 10 OG ‘Steel’ was underway while Michael Jordan was away from the game of basketball. By the time he announced his return for the ’94 - ’95 season, the AJ10 was ready. This inaugural colorway features a white leather upper, complete with a black and grey outsole marked by Michael’s early career milestones. A tonal leather toe cap would be removed from later releases at the request of MJ himself.",
+            nickName: "Steel",
+            colorWay: "White/Black-Light Steel Grey",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 11, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 101",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 62,
+            name: "Air Jordan 1 Retro 'Bred' 1994",
+            history: "Often referred to as “the shoe that started it all,” the Air Jordan 1 was first brought back in 1994 with the release of the Chicago-inspired Retro black and red iteration that pays tribute to Michael Jordan following his retirement. The design features premium leather throughout, as well as a white rubber midsole and solid red outsole. Signature branding details include Air Jordan logos on the lateral sides along with Nike Air logos on each tongue.",
+            nickName: "Bred",
+            colorWay: "Black/Red",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130207 061",
+            designers: [.peterMoore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.oneHigh),
+            materials: "Leather",
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 63,
+            name: "Air Jordan 10 OG 'Powder Blue'",
+            history: "Originally released in 1994, the Air Jordan 10 OG in Powder Blue pays tribute to Michael Jordan’s alma mater, the University of North Carolina. The design is distinguished by a striped rubber outsole that lists Michael Jordan’s many accomplishments. It also features a matching black tongue and laces and Powder Blue accents.",
+            nickName: "Powder Blue",
+            colorWay: "White/Black-Dark Powder Blue",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 11, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 102",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 64,
+            name: "Air Jordan 1 Retro 'Bred' 1994 Sample",
+            history: nil,
+            nickName: "Bred",
+            colorWay: "Black/Red",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130207 061 S",
+            designers: [.peterMoore],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.oneHigh),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 65,
+            name: "Air Jordan 10 OG 'Shadow'",
+            history: "Originally released in 1994, the ‘Shadow’ version of the Air Jordan 10 OG is celebrated as the colorway to stand out the most during a time when Nike was known for using lighter color combinations. The shoe’s upper blends Shadow Grey nubuck and black tumbled leather with a checkered inner lining atop a black midsole and matching outsole. The outsole features Jordan’s accomplishments listed from his rookie year to 1994 and Beyond...",
+            nickName: "Shadow",
+            colorWay: "Black/Dark Shadow-True Red",
+            releaseDate: DateComponents(calendar: .current, year: 1994, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 001",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
     }
 }
