@@ -93,7 +93,7 @@ final class SneakerModel: Model {
         self.retailPrice = retailPrice
         self.sku = sku
         self.materials = materials
-        self.imageFields = imageFields.flatMap { Image(sneakerId: id, options: $0) }
+        self.imageFields = try imageFields.flatMap { try Image(sneakerId: id, options: $0) }
         
         $brand.id = brand
         $silhouette.id = silhouette
@@ -171,41 +171,51 @@ extension SneakerModel {
             self.rightLateral = rightLateral
         }
         
-        convenience init(sneakerId: String, options: Options) {
-            let imagePath = "https://nxtsole.github.io/soleverse-images/sneakers/"
+        convenience init(sneakerId: String, options: Options) throws {
+            let components = sneakerId.split(separator: "-")
+            
+            guard let identifier = components.first else {
+                throw DomainError.somethingWrong("Sneaker identifier not found in: \(sneakerId)")
+            }
+            
+            guard let brandDirectory = components.last else {
+                throw DomainError.somethingWrong("Brand not found in: \(sneakerId)")
+            }
+            
+            let imagePath = "https://nxtsole.github.io/soleverse-images/sneakers/\(brandDirectory)/\(identifier)"
             
             var imageMap: [Options: String] = [:]
             
             if options.contains(.front) {
-                imageMap[.front] = "\(imagePath)\(sneakerId)-front.png"
+                imageMap[.front] = "\(imagePath)-front.png"
             }
             
             if options.contains(.back) {
-                imageMap[.back] = "\(imagePath)\(sneakerId)-back.png"
+                imageMap[.back] = "\(imagePath)-back.png"
             }
             
             if options.contains(.medial) {
-                imageMap[.medial] = "\(imagePath)\(sneakerId)-medial.png"
+                imageMap[.medial] = "\(imagePath)-medial.png"
             }
             
             if options.contains(.leftMedial) {
-                imageMap[.leftMedial] = "\(imagePath)\(sneakerId)-leftMedial.png"
+                imageMap[.leftMedial] = "\(imagePath)-leftMedial.png"
             }
             
             if options.contains(.rightMedial) {
-                imageMap[.rightMedial] = "\(imagePath)\(sneakerId)-rightMedial.png"
+                imageMap[.rightMedial] = "\(imagePath)-rightMedial.png"
             }
             
             if options.contains(.lateral) {
-                imageMap[.lateral] = "\(imagePath)\(sneakerId)-lateral.png"
+                imageMap[.lateral] = "\(imagePath)-lateral.png"
             }
             
             if options.contains(.leftLateral) {
-                imageMap[.leftLateral] = "\(imagePath)\(sneakerId)-leftLateral.png"
+                imageMap[.leftLateral] = "\(imagePath)-leftLateral.png"
             }
             
             if options.contains(.rightLateral) {
-                imageMap[.rightLateral] = "\(imagePath)\(sneakerId)-rightLateral.png"
+                imageMap[.rightLateral] = "\(imagePath)-rightLateral.png"
             }
             
             self.init(
