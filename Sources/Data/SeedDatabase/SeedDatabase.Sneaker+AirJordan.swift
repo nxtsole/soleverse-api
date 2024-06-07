@@ -883,5 +883,90 @@ extension SeedDatabase {
             imageFields: [.lateral],
             on: database
         )
+        try await SneakerModel(
+            id: 51,
+            name: "Air Jordan 8 OG 'Aqua' 1993",
+            history: "The bold design of the Air Jordan 8, highlighted by crisscrossing straps and a fuzzy chenille tongue, is enhanced by this OG colorway. It features black durabuck across the upper, accented with a staccato mix of Bright Concord and Aqua on the sculpted midsole. Within the tooling, an Air Sole unit combines with a polycarbonate torsion plate for added cushioning and stability.",
+            nickName: "Aqua",
+            colorWay: "Black/Bright Concord-Aqua Tone",
+            releaseDate: DateComponents(calendar: .current, year: 1993, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130169 040",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.eight),
+            materials: "Durabuck",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 52,
+            name: "Air Jordan 9 OG",
+            history: nil,
+            nickName: nil,
+            colorWay: "White-Black-True Red",
+            releaseDate: DateComponents(calendar: .current, year: 1993, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130182 100",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.nine),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 53,
+            name: "Air Jordan 8 OG 'Bugs Bunny'",
+            history: nil,
+            nickName: "Bugs Bunny",
+            colorWay: "White/Black-True Red",
+            releaseDate: DateComponents(calendar: .current, year: 1993, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "130169 100",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.eight),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 54,
+            name: "Air Jordan 8 OG 'Playoff'",
+            history: "The Air Jordan 8 OG ‘Playoff’ released in April 1993. This was the shoe that Michael wore when he clinched his first three-peat at the conclusion of the ’93 NBA Playoffs. Its black durabuck upper is supported by a unique cross-strap design, while the interior has a Huarache-like sleeve adorned with a multi-color design. A pattern made up of brushstroke-lines distinguishes the mudguard.",
+            nickName: "Playoff",
+            colorWay: "Black-Black-True Red",
+            releaseDate: DateComponents(calendar: .current, year: 1993, month: 4, day: 1).date,
+            retailPrice: nil,
+            sku: "130169 060",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.eight),
+            materials: "Durabuck",
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 55,
+            name: "Air Jordan 9 OG",
+            history: "One of the original four colorways of the Air Jordan 9, the unusual color palette of black and olive is mixed on the upper consisting of leather and nubuck. The Jordan 9 implements an inner bootie that works in unison with the speed-lacing system for support. The design also features a series of words in different languages on the outsole to commemorate Michael Jordan’s emergence as an international icon.",
+            nickName: nil,
+            colorWay: "Black-Light Olive-True Red",
+            releaseDate: DateComponents(calendar: .current, year: 1993, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130182 030",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.nine),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
     }
 }
