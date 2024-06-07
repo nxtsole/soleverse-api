@@ -1138,5 +1138,107 @@ extension SeedDatabase {
             imageFields: [.lateral, .medial, .back],
             on: database
         )
+        try await SneakerModel(
+            id: 66,
+            name: "Air Jordan 11 OG 'Concord' 1995",
+            history: "The Air Jordan 11 OG 'Concord' 1995 was the first colorway of the Jordan 11 to hit stores in November 1995, which was marketed with the iconic ‘100-foot dunk’ commercial. The OG version features a Cordura ballistic nylon construction with black patent leather making up a full-coverage mudguard. It rests on a lightweight Phylon midsole with a full-length Air Sole unit, a carbon fiber spring plate and a translucent outsole.",
+            nickName: "Concord",
+            colorWay: "White/Black-Dark Concord",
+            releaseDate: DateComponents(calendar: .current, year: 1995, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130245 101",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.eleven),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 67,
+            name: "Air Jordan 10 OG 'New York'",
+            history: "The Air Jordan 10 OG 'New York' pays tribute to basketball in the Big Apple. From Madison Square Garden to Rucker Park, pure love of basketball can be found all over the city. Unofficial Jordan team member Hubert Davis and others also laced up this Knicks colored Jordan 10. The sneaker features a white leather upper with matching stitching throughout and black leather overlays. The low top also sports Royal Blue and Orange Flame accents as a nod to the New York Knicks. Released as part of the City Pack of Jordan 10, alongside Chicago, Seattle, Sacramento and Orlando.",
+            nickName: "New York",
+            colorWay: "White/Black-Royal Blue-Orange Flame",
+            releaseDate: DateComponents(calendar: .current, year: 1995, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 103",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 68,
+            name: "Air Jordan 10 OG 'Chicago'",
+            history: "Michael Jordan wore the Air Jordan 10 OG ‘Chicago’ when he returned to basketball in 1995, also temporarily wearing the jersey number 45. He sported both when he put up 55 points in New York City, his fifth game back from his first retirement. The shoe features classic Chicago Bulls colors, including a tumbled white leather construction with contrasting black and red accents. On the outsole, red stripes are imprinted with 10 of MJ’s early achievements.",
+            nickName: "Chicago",
+            colorWay: "White/Black-True Red",
+            releaseDate: DateComponents(calendar: .current, year: 1995, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 108",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 69,
+            name: "Air Jordan 10 OG 'Orlando'",
+            history: "The ‘Orlando’ color scheme was one of the OG ‘City’ colorways of the Air Jordan 10, featuring a premium white leather construction on the majority of the upper, with black tones on the mudguard, eyestay and collar. The Orlando Magic’s royal blue emerges on the sockliner and outsole, while the classic bars on the outsole commemorate some of Michael Jordan’s early career achievements. This was released alongside four other cities that celebrated Jordan Brand athletes including Sacramento, New York, Seattle and Chicago.",
+            nickName: "Orlando",
+            colorWay: "White/Black-Royal Blue-Metallic Silver",
+            releaseDate: DateComponents(calendar: .current, year: 1995, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 105",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 70,
+            name: "Air Jordan 10 OG 'Seattle'",
+            history: "Released in 1995, the Air Jordan 10 ‘Seattle’ is one of five OG colorways from the silhouette’s City Series, also featuring special editions dedicated to Chicago, New York, Orlando and Sacramento. Like its counterparts, the Seattle colorway is inspired by the NBA franchise attached to the respective city. Dressed in white tumbled leather with basic black on the throat and midsole, the shoe is accented with the signature green coloring of the now-defunct Seattle SuperSonics.",
+            nickName: "Seattle",
+            colorWay: "White/Black-Kelly-Yellow Gold",
+            releaseDate: DateComponents(calendar: .current, year: 1995, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 106",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 71,
+            name: "Air Jordan 10 OG 'Sacramento'",
+            history: "Originally released in 1995, the Air Jordan 10 OG 'Sacramento' features a full-grain black leather upper with purple accents on the inner lining and outsole, a padded tongue and collar for added comfort, and a cushioning midsole for added comfort. Part of the ‘City Pack’, this colorway released alongside colors celebrating Seattle, New York, Orlando and Chicago.",
+            nickName: "Sacramento",
+            colorWay: "Black/Dark Concord-Metallic Silver",
+            releaseDate: DateComponents(calendar: .current, year: 1995, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "130209 051",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.ten),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
     }
 }
