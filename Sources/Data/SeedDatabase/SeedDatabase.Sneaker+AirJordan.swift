@@ -1376,5 +1376,107 @@ extension SeedDatabase {
             imageFields: nil,
             on: database
         )
+        try await SneakerModel(
+            id: 80,
+            name: "Air Jordan 12 OG 'Flu Game' 1997",
+            history: "Michael Jordan broke out the iconic ‘Flu Game’ rendition of the Jordan 12 during the 1997 NBA Finals against the Utah Jazz. Enduring 103-degree fever and flu-like symptoms, Michael Jordan would suit up anyway and go on to score 38 points, rack up seven rebounds, and dish out five assists before eventually leading the Bulls to yet another title later on in the series. The shoe itself is constructed with a mostly black leather upper with Varsity Red accents on the heel tabs, midsole, and toe to resemble the Chicago team colors.",
+            nickName: "Flu Game",
+            colorWay: "Black/Varsity Red",
+            releaseDate: DateComponents(calendar: .current, year: 1997, month: 6, day: 1).date,
+            retailPrice: nil,
+            sku: "130690 061",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.tweleve),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 81,
+            name: "Air Jordan 13 OG 'Bred' 1998",
+            history: "The ‘Bred’ Air Jordan 13 helped define the classic black and red color scheme of the Bulls back in 1998. Taking design inspiration from the black panther, the shoe is defined by its 3M side panels, a carbon-fiber spring plate, and a distinctive Jumpman hologram that mimics a panther eye.",
+            nickName: "Bred",
+            colorWay: "Black/Varsity Red",
+            releaseDate: DateComponents(calendar: .current, year: 1997, month: 12, day: 31).date,
+            retailPrice: nil,
+            sku: "136002 062",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.thirteen),
+            materials: "Mesh",
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 82,
+            name: "Air Jordan 13 OG 'Playoffs' 1997",
+            history: "Inspired by the black panther, the Air Jordan 13 OG, released in 1997, features signature elements like a green holographic sphere representing the animal’s eye and a stylized sole modeled after a paw. The organic shapes are complemented by a classic Jordan colorway of black, True Red, and white. They feature black overlapping leather and durabuck layers with patterned indentations, a white midsole, and a thin True Red outsole.",
+            nickName: "Playoffs",
+            colorWay: "Black/True Red/White",
+            releaseDate: DateComponents(calendar: .current, year: 1997, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "136002 061",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.thirteen),
+            materials: "Textile",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 83,
+            name: "Air Jordan 13 OG 'He Got Game' 1997",
+            history: "Inspired by the black panther for its stealth and reflexes which mirror MJ’s court style, the Air Jordan 13 features a paw-like outsole and green holographic eye towards the heel. The OG colorway features a white, black, and red scheme, harkening back to the Chicago Bulls uniform colors. A full-grain quilted leather upper is matched with a suede heel construction that wraps down the midsole, and a hologram appears on the back heel that symbolizes the panther eye.",
+            nickName: "He Got Game",
+            colorWay: "White/True Red/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1997, month: 11, day: 1).date,
+            retailPrice: nil,
+            sku: "136002 132",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.thirteen),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 84,
+            name: "Air Jordan 12 OG 'Obsidian'",
+            history: "An original release from 1997, the Air Jordan 12 OG 'Obsidian' is the only AJ 12 colorway that Michael Jordan never wore in a game. Its design is inspired by the Rising Sun Flag of Japan, with vertical stitching that extends outward over the dark blue leather upper. A white mudguard extends over the lateral vamp, leading into foam midsole and uniquely patterned rubber outsole. A Jumpman adorns the front toe to add accent.",
+            nickName: "Obsidian",
+            colorWay: "Obsidian-White-French Blue",
+            releaseDate: DateComponents(calendar: .current, year: 1997, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "130690 411",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.tweleve),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 85,
+            name: "Air Jordan 13 OG BG 'He Got Game' 1997",
+            history: "The Air Jordan 13 BG is a kids' shoe presented with a color scheme of white, True Red and black. Released in November 1997 and designed by Tinker Hatfield, the model is the last one released during Michael Jordan's career with the Chicago Bulls. Its panther-inspired design features a premium leather upper, signature branding and the silhouette's iconic holographic eye. A multicolored outsole reminiscent of a panther paw completes the look.",
+            nickName: "He Got Game",
+            colorWay: "White/True Red/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1997, month: 1, day: 1).date,
+            retailPrice: nil,
+            sku: "134071 132",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.thirteen),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
     }
 }

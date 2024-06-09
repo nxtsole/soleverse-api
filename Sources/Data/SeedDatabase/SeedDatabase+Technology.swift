@@ -18,6 +18,7 @@ import Fluent
 extension SeedDatabase {
     func prepareTechnologies(on database: Database) async throws {
         try await TechnologyModel(technology: .air, name: "Air", history: nil, brand: .airJordan, on: database)
+        try await TechnologyModel(technology: .zoomAir, name: "Zoom Air", history: nil, brand: .airJordan, on: database)
     }
     
     func revertTechnologies(on database: Database) async throws {
@@ -30,6 +31,7 @@ extension SeedDatabase {
 extension TechnologyModel {
     enum Technologies: Int {
         case air
+        case zoomAir
     }
 }
 
