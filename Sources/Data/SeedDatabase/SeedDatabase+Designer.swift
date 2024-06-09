@@ -35,7 +35,8 @@ extension SeedDatabase {
             name: "Bruce Kilgore",
             history: nil,
             silhouettes: [
-                .airJordan(.two)
+                .airJordan(.two),
+                .airJordan(.twoLow)
             ],
             brandsWorkedAt: [
                 .airJordan
@@ -47,7 +48,19 @@ extension SeedDatabase {
             name: "Tinker Hatfield",
             history: nil,
             silhouettes: [
-                .airJordan(.three)
+                .airJordan(.three),
+                .airJordan(.four),
+                .airJordan(.five),
+                .airJordan(.six),
+                .airJordan(.seven),
+                .airJordan(.skySeven),
+                .airJordan(.eight),
+                .airJordan(.nine),
+                .airJordan(.ten),
+                .airJordan(.eleven),
+                .airJordan(.elevenLowIE),
+                .airJordan(.tweleve),
+                .airJordan(.thirteen)
             ],
             brandsWorkedAt: [
                 .airJordan
