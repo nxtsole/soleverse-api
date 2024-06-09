@@ -62,7 +62,9 @@ extension SeedDatabase {
                 .airJordan(.tweleve),
                 .airJordan(.thirteen),
                 .airJordan(.thirteenLow),
-                .airJordan(.fourteen)
+                .airJordan(.fourteen),
+                .airJordan(.fourteenLow),
+                .airJordan(.fifteen)
             ],
             brandsWorkedAt: [
                 .airJordan
