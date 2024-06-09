@@ -35,6 +35,7 @@ extension SneakerModel {
         case patentLeather = "Patent Leather"
         case mesh = "Mesh"
         case textile = "Textile"
+        case suede = "Suede"
     }
 
     @discardableResult
