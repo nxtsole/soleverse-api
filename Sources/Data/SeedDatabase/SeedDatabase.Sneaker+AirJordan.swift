@@ -1240,5 +1240,141 @@ extension SeedDatabase {
             imageFields: [.lateral],
             on: database
         )
+        try await SneakerModel(
+            id: 72,
+            name: "Air Jordan 11 OG 'Bred' 1996",
+            history: "Utilizing the iconic black, white and red colors of the Chicago Bulls, the Air Jordan 11 takes these colors into a classic original AJ11 color, which Michael Jordan wore when he won his fourth NBA title with the Chicago Bulls. Black makes up the majority of the upper, including the patent leather mudguard, with True Red limited to the branding. A white midsole leads to a translucent True Red outsole, which is broken up by black sections of herringbone at the toe and heel.",
+            nickName: "Bred",
+            colorWay: "Black/True Red-White",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 4, day: 1).date,
+            retailPrice: nil,
+            sku: "130245 062",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.eleven),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 73,
+            name: "Air Jordan 11 OG 'Columbia'",
+            history: "The ‘Columbia’ edition of the Air Jordan 11 was an original colorway when the shoe dropped in 1996, however Michael Jordan would only ever wear the design during that year’s NBA All-Star Game. Featuring a white upper, patent leather mudguard and Columbia Blue accents, the sneaker reflects the colors of Jordan’s University of North Carolina alma mater. His number 23 appears on the heel.",
+            nickName: "Columbia",
+            colorWay: "White/Columbia Blue-Black",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 2, day: 1).date,
+            retailPrice: nil,
+            sku: "130245 141",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.eleven),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 74,
+            name: "Air Jordan 11 OG Low IE 'Cobalt' 1996",
+            history: nil,
+            nickName: "Cobalt",
+            colorWay: "White/Light Grey-Cobalt",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 5, day: 31).date,
+            retailPrice: nil,
+            sku: "130270 101",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.elevenLowIE),
+            materials: nil,
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 75,
+            name: "Air Jordan 11 OG Low IE 'Bred' 1996",
+            history: nil,
+            nickName: "Bred",
+            colorWay: "Black/Dark Grey/True Red",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 10, day: 1).date,
+            retailPrice: nil,
+            sku: "130270 001",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.elevenLowIE),
+            materials: "Leather",
+            imageFields: [.lateral],
+            on: database
+        )
+        try await SneakerModel(
+            id: 76,
+            name: "Air Jordan 12 OG 'Taxi' 1996",
+            history: "Forever associated with the ‘Flu Game,’ the Air Jordan 12 appears here in the OG ‘Taxi’ colorway, one of five OG colorways of the shoe. The shoe features a tumbled leather upper in black and white, highlighted by hits of gold on the top eyelets. Further hits of yellow emerge on the heel tab and carbon fiber midsole plate.",
+            nickName: "Taxi",
+            colorWay: "White/Black-Taxi",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 11, day: 1).date,
+            retailPrice: nil,
+            sku: "130690 101",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.tweleve),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 77,
+            name: "Air Jordan 12 OG 'Cherry' 1997",
+            history: "The Varsity Red, white, and black version of the Original Air Jordan 12 is one of, if not the, most recognizable of the first five colorways and Jordan’s preferred look during the 1997 season. The design’s upper features premium white leather with Nisshoki-inspired stitching reminiscent of the sun’s rays and a lizard-print mudguard in red. Signature details include a spelled-out “TWO 3” instead of “23” on the tongue, a quick-lacing system, carbon fiber shank plate, and Zoom Air.",
+            nickName: "Cherry",
+            colorWay: "White-Varsity Red-Black",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 3, day: 26).date,
+            retailPrice: nil,
+            sku: "130690 161",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.tweleve),
+            materials: nil,
+            imageFields: [.lateral, .medial, .back],
+            on: database
+        )
+        try await SneakerModel(
+            id: 78,
+            name: "Air Jordan 12 TD OG 'Cherry' 1997",
+            history: nil,
+            nickName: "Cherry",
+            colorWay: "White/Varsity Red/Black",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 3, day: 26).date,
+            retailPrice: nil,
+            sku: "850001 161",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.tweleve),
+            materials: "Leather",
+            imageFields: nil,
+            on: database
+        )
+        try await SneakerModel(
+            id: 79,
+            name: "Sky Jordan 11 PS 'Bred' 1996",
+            history: nil,
+            nickName: "Bred",
+            colorWay: "Black/True Red/White",
+            releaseDate: DateComponents(calendar: .current, year: 1996, month: 4, day: 1).date,
+            retailPrice: nil,
+            sku: "151118 062",
+            designers: [.tinkerHatfield],
+            collaborators: [],
+            brand: .airJordan,
+            silhouette: .airJordan(.skyEleven),
+            materials: "Patent Leather",
+            imageFields: nil,
+            on: database
+        )
     }
 }
