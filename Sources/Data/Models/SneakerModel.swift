@@ -59,7 +59,7 @@ final class SneakerModel: Model {
     var silhouette: SilhouetteModel?
     
     @OptionalField(key: "materials")
-    var materials: String?
+    var materials: [String]?
     
     @OptionalField(key: "image")
     var imageFields: Image?
@@ -81,7 +81,7 @@ final class SneakerModel: Model {
          collaborators: [CollaboratorModel.IDValue],
          brand: BrandModel.IDValue,
          silhouette: SilhouetteModel.IDValue?,
-         materials: String?,
+         materials: [String]?,
          imageFields: Image.Options?,
          on database: Database) async throws {
         self.id = id
@@ -278,7 +278,7 @@ extension SneakerModel {
                 .field("sku", .string)
                 .field("brand", .int, .required, .references(BrandModel.schema, "id"))
                 .field("silhouette", .string, .references(SilhouetteModel.schema, "id"))
-                .field("materials", .string)
+                .field("materials", .array(of: .string))
                 .field("image", .dictionary(of: .string))
                 .create()
         }
@@ -309,7 +309,7 @@ extension SneakerModel: EntityMappable {
                 collaborators: try collaborators.map { try $0.toEntity },
                 brand: try brand.toEntity,
                 silhouette: try silhouette.flatMap { try $0.toEntity },
-                materials: materials,
+                materials: materials ?? [],
                 image: imageFields.flatMap {
                     SneakerEntity.ImageEntity(
                         front: $0.front,

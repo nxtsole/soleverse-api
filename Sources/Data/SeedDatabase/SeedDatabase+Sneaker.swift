@@ -28,6 +28,14 @@ extension SeedDatabase {
 // MARK: - SneakerModel
 
 extension SneakerModel {
+    enum Materials: String {
+        case leather = "Leather"
+        case nubuck = "Nubuck"
+        case durabuck = "Durabuck"
+        case patentLeather = "Patent Leather"
+        case mesh = "Mesh"
+        case textile = "Textile"
+    }
 
     @discardableResult
     convenience init(id: Int,
@@ -42,7 +50,7 @@ extension SneakerModel {
                      collaborators: [CollaboratorModel.Collaborators],
                      brand: BrandModel.Brands,
                      silhouette: SilhouetteModel.Silhouettes?,
-                     materials: String?,
+                     materials: [Materials]?,
                      imageFields: Image.Options?,
                      on database: Database) async throws {
         try await self.init(
@@ -58,7 +66,7 @@ extension SneakerModel {
             collaborators: collaborators.map(\.rawValue),
             brand: brand.rawValue,
             silhouette: silhouette.flatMap { $0.id },
-            materials: materials,
+            materials: materials.flatMap { $0.map(\.rawValue) },
             imageFields: imageFields,
             on: database
         )

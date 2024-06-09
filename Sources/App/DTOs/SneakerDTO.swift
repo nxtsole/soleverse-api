@@ -32,7 +32,7 @@ struct SneakerDTO: Content {
     let collaborators: [CollaboratorDTO]?
     let brand: BrandDTO
     let silhouette: SilhouetteDTO?
-    let materials: String?
+    let materials: [String]?
     let image: ImageDTO?
 }
 

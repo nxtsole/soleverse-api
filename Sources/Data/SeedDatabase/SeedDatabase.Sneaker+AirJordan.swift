@@ -29,7 +29,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .back, .medial],
             on: database
         )
@@ -46,7 +46,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .back, .medial],
             on: database
         )
@@ -63,7 +63,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -80,7 +80,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -97,7 +97,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -114,7 +114,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -131,7 +131,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -148,7 +148,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -165,7 +165,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneLow),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -182,7 +182,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneLow),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -199,7 +199,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -216,7 +216,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -233,7 +233,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -250,7 +250,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -267,7 +267,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -284,7 +284,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -301,7 +301,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -318,7 +318,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.skyOneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -335,7 +335,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -352,7 +352,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.two),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -369,7 +369,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.two),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -386,7 +386,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.twoLow),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -403,7 +403,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.twoLow),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -420,7 +420,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.three),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -437,7 +437,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.three),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -454,7 +454,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.three),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -471,7 +471,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.three),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -488,7 +488,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.four),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -505,7 +505,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.four),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -522,7 +522,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.four),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -539,7 +539,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.four),
-            materials: "Nubuck",
+            materials: [.nubuck],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -624,7 +624,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.six),
-            materials: "Nubuck",
+            materials: [.nubuck],
             imageFields: [.lateral],
             on: database
         )
@@ -641,7 +641,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.six),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -658,7 +658,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.six),
-            materials: "Nubuck",
+            materials: [.nubuck],
             imageFields: [.lateral],
             on: database
         )
@@ -675,7 +675,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.six),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -692,7 +692,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.six),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -709,7 +709,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.six),
-            materials: "Nubuck",
+            materials: [.nubuck],
             imageFields: [.lateral],
             on: database
         )
@@ -726,7 +726,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -743,7 +743,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Nubuck",
+            materials: [.nubuck],
             imageFields: [.lateral],
             on: database
         )
@@ -760,7 +760,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Nubuck",
+            materials: [.nubuck],
             imageFields: [.lateral],
             on: database
         )
@@ -777,7 +777,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -794,7 +794,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -811,7 +811,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.skySeven),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -828,7 +828,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Nubuck",
+            materials: [.nubuck],
             imageFields: [.lateral],
             on: database
         )
@@ -845,7 +845,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.skySeven),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -862,7 +862,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -879,7 +879,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.seven),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -896,7 +896,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.eight),
-            materials: "Durabuck",
+            materials: [.durabuck],
             imageFields: [.lateral],
             on: database
         )
@@ -930,7 +930,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.eight),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -947,7 +947,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.eight),
-            materials: "Durabuck",
+            materials: [.durabuck],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -998,7 +998,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -1083,7 +1083,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -1117,7 +1117,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.oneHigh),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -1304,7 +1304,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.elevenLowIE),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -1355,7 +1355,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.tweleve),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: nil,
             on: database
         )
@@ -1372,7 +1372,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.skyEleven),
-            materials: "Patent Leather",
+            materials: [.patentLeather],
             imageFields: nil,
             on: database
         )
@@ -1406,7 +1406,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.thirteen),
-            materials: "Mesh",
+            materials: [.mesh],
             imageFields: [.lateral, .medial, .back],
             on: database
         )
@@ -1423,7 +1423,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.thirteen),
-            materials: "Textile",
+            materials: [.textile],
             imageFields: [.lateral],
             on: database
         )
@@ -1440,7 +1440,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.thirteen),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )
@@ -1474,7 +1474,7 @@ extension SeedDatabase {
             collaborators: [],
             brand: .airJordan,
             silhouette: .airJordan(.thirteen),
-            materials: "Leather",
+            materials: [.leather],
             imageFields: [.lateral],
             on: database
         )

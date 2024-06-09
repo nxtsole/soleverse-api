@@ -59,8 +59,8 @@ public struct SneakerEntity {
     /// Returns the type of silhouette that the sneaker is.
     public let silhouette: SilhouetteEntity?
     
-    /// Returns the materials that sneaker is made up of.
-    public let materials: String?
+    /// Returns the list of materials that the sneaker is made up of.
+    public let materials: [String]
     
     /// Returns the image set containing the list of images to display.
     public let image: ImageEntity?
@@ -79,7 +79,7 @@ public struct SneakerEntity {
                 collaborators: [CollaboratorEntity],
                 brand: BrandEntity,
                 silhouette: SilhouetteEntity?,
-                materials: String?,
+                materials: [String],
                 image: ImageEntity?) {
         self.id = id
         self.name = name
