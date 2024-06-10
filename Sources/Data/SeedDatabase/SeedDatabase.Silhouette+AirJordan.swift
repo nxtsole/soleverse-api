@@ -42,6 +42,8 @@ extension SeedDatabase {
         try await SilhouetteModel(silhouette: .jumpmanTeamTwo, name: "Jordan Jumpman Team 2", history: nil, brand: .airJordan, technologies: [], on: database)
         try await SilhouetteModel(silhouette: .fourteenLow, name: "Air Jordan 14 Low", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
         try await SilhouetteModel(silhouette: .fifteen, name: "Air Jordan 15", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .fifteenLow, name: "Air Jordan 15 Low", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .trunnerLX, name: "Jordan Trunner LX", history: nil, brand: .airJordan, technologies: [.air], on: database)
     }
 }
 
@@ -74,6 +76,8 @@ extension SilhouetteModel.Silhouettes {
         case jumpmanTeamTwo
         case fourteenLow
         case fifteen
+        case fifteenLow
+        case trunnerLX
     }
 }
 
