@@ -65,7 +65,21 @@ extension SeedDatabase {
                 .airJordan(.fourteen),
                 .airJordan(.fourteenLow),
                 .airJordan(.fifteen),
-                .airJordan(.fifteenLow)
+                .airJordan(.fifteenLow),
+                .airJordan(.elevenLow)
+            ],
+            brandsWorkedAt: [
+                .airJordan
+            ],
+            on: database
+        )
+        try await DesignerModel(
+            designer: .wilsonSmithIII,
+            name: "Wilson Smith Ⅲ",
+            history: nil,
+            silhouettes: [
+                .airJordan(.sixteen),
+                .airJordan(.sixteenLow)
             ],
             brandsWorkedAt: [
                 .airJordan
@@ -86,6 +100,7 @@ extension DesignerModel {
         case peterMoore
         case bruceKilgore
         case tinkerHatfield
+        case wilsonSmithIII
     }
 }
 
