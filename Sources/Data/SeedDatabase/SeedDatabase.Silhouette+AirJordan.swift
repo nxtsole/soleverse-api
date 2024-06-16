@@ -56,6 +56,11 @@ extension SeedDatabase {
         try await SilhouetteModel(silhouette: .seventeenPlus, name: "Air Jordan 17+", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
         try await SilhouetteModel(silhouette: .trunner218, name: "Jordan Trunner 218", history: nil, brand: .airJordan, technologies: [], on: database)
         try await SilhouetteModel(silhouette: .trunnerCondo, name: "Jordan Trunner Condo", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .nuRetroTwo, name: "Nu' Retro Air Jordan 2", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .eighteen, name: "Air Jordan 18", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .eightLow, name: "Air Jordan 8 Low", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .eighteenLow, name: "Air Jordan 18 Low", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .eighteenHalf, name: "Air Jordan 18.5", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
     }
 }
 
@@ -102,6 +107,11 @@ extension SilhouetteModel.Silhouettes {
         case seventeenPlus
         case trunner218
         case trunnerCondo
+        case nuRetroTwo
+        case eighteen
+        case eightLow
+        case eighteenLow
+        case eighteenHalf
     }
 }
 

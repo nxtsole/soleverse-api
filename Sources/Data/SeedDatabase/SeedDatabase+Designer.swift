@@ -36,7 +36,8 @@ extension SeedDatabase {
             history: nil,
             silhouettes: [
                 .airJordan(.two),
-                .airJordan(.twoLow)
+                .airJordan(.twoLow),
+                .airJordan(.nuRetroTwo)
             ],
             brandsWorkedAt: [
                 .airJordan
@@ -68,7 +69,8 @@ extension SeedDatabase {
                 .airJordan(.fifteenLow),
                 .airJordan(.elevenLow),
                 .airJordan(.nineLow),
-                .airJordan(.sixLow)
+                .airJordan(.sixLow),
+                .airJordan(.eightLow)
             ],
             brandsWorkedAt: [
                 .airJordan
@@ -92,6 +94,20 @@ extension SeedDatabase {
             ],
             on: database
         )
+        try await DesignerModel(
+            designer: .tateKuerbis,
+            name: "Tate Kuerbis",
+            history: nil,
+            silhouettes: [
+                .airJordan(.eighteen),
+                .airJordan(.eighteenLow),
+                .airJordan(.eighteenHalf)
+            ],
+            brandsWorkedAt: [
+                .airJordan
+            ],
+            on: database
+        )
     }
     
     func revertDesigners(on database: Database) async throws {
@@ -107,6 +123,7 @@ extension DesignerModel {
         case bruceKilgore
         case tinkerHatfield
         case wilsonSmithIII
+        case tateKuerbis
     }
 }
 
