@@ -66,7 +66,9 @@ extension SeedDatabase {
                 .airJordan(.fourteenLow),
                 .airJordan(.fifteen),
                 .airJordan(.fifteenLow),
-                .airJordan(.elevenLow)
+                .airJordan(.elevenLow),
+                .airJordan(.nineLow),
+                .airJordan(.sixLow)
             ],
             brandsWorkedAt: [
                 .airJordan
@@ -79,7 +81,11 @@ extension SeedDatabase {
             history: nil,
             silhouettes: [
                 .airJordan(.sixteen),
-                .airJordan(.sixteenLow)
+                .airJordan(.sixteenLow),
+                .airJordan(.seventeen),
+                .airJordan(.seventeenLow),
+                .airJordan(.seventeenMule),
+                .airJordan(.seventeenPlus)
             ],
             brandsWorkedAt: [
                 .airJordan

@@ -47,6 +47,15 @@ extension SeedDatabase {
         try await SilhouetteModel(silhouette: .sixteen, name: "Air Jordan 16", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
         try await SilhouetteModel(silhouette: .elevenLow, name: "Air Jordan 11 Low", history: nil, brand: .airJordan, technologies: [.air], on: database)
         try await SilhouetteModel(silhouette: .sixteenLow, name: "Air Jordan 16 Low", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .seventeen, name: "Air Jordan 17", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .trunnerSmash, name: "Jordan Trunner Smash", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .seventeenLow, name: "Air Jordan 17 Low", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .nineLow, name: "Air Jordan 9 Low", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .sixLow, name: "Air Jordan 6 Low", history: nil, brand: .airJordan, technologies: [.air], on: database)
+        try await SilhouetteModel(silhouette: .seventeenMule, name: "Air Jordan 17 Mule", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .seventeenPlus, name: "Air Jordan 17+", history: nil, brand: .airJordan, technologies: [.zoomAir], on: database)
+        try await SilhouetteModel(silhouette: .trunner218, name: "Jordan Trunner 218", history: nil, brand: .airJordan, technologies: [], on: database)
+        try await SilhouetteModel(silhouette: .trunnerCondo, name: "Jordan Trunner Condo", history: nil, brand: .airJordan, technologies: [.air], on: database)
     }
 }
 
@@ -84,6 +93,15 @@ extension SilhouetteModel.Silhouettes {
         case sixteen
         case elevenLow
         case sixteenLow
+        case seventeen
+        case trunnerSmash
+        case seventeenLow
+        case nineLow
+        case sixLow
+        case seventeenMule
+        case seventeenPlus
+        case trunner218
+        case trunnerCondo
     }
 }
 
